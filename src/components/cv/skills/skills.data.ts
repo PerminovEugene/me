@@ -8,6 +8,7 @@ export const skills: Skills = [
       "Webpack",
       "Redux saga",
       "CSS3",
+      "Next.js",
       "Styled-Components",
       "Metamask SDK",
       "ethers.js",
@@ -49,8 +50,9 @@ export const skills: Skills = [
       "Golang",
       "HTML5",
       "SQL",
+      "Solidity",
     ],
-    title: "Languages",
+    title: "Programming Languages",
   },
   {
     technologies: ["Postgresql", "Mongodb", "Redis", "Kafka", "Elastic Search"],
@@ -62,7 +64,7 @@ export const skills: Skills = [
       "Docker",
       "AWS",
       "Debezium",
-      "a bit of kubernetes",
+      "Kubernetes",
       "Github Actions",
       "RabbitMQ",
       "Aptible",
@@ -73,13 +75,7 @@ export const skills: Skills = [
     title: "Devops",
   },
   {
-    technologies: [
-      "Etherium",
-      "EVM",
-      "Solidity",
-      "Hardhat",
-      "l2 - learning in free time",
-    ],
+    technologies: ["Etherium", "EVM", "Solidity", "Hardhat"],
     title: "WEB3",
   },
 ];
