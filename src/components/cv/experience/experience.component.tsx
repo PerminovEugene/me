@@ -1,13 +1,15 @@
 import allExperience from "./experience.data";
 import { Experience } from "./experience.types";
 
+const onlyYear = (date: string) => date.split(" ")[1];
+
 const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
   return (
     <div className="mb-4 text-black">
       <div className="flex items-center text-md">
         <h4 className="font-semibold">{experience.title}</h4>,
         <span className="ml-1">
-          {experience.startDate} - {experience.endDate}
+          {onlyYear(experience.startDate)} - {onlyYear(experience.endDate)}
         </span>
       </div>
       <div className="flex items-center text-md">
@@ -31,7 +33,7 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
           ))}
         </div>
       </div> */}
-      <div className="">
+      <div>
         {/* <h5 className="font-semibold">Key Responsibilities & Achievements:</h5> */}
         <ul className="list-disc list-inside mt-1">
           {experience.responsibilities.map((item, index) => (
@@ -45,10 +47,10 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
   );
 };
 
-const ExperienceBlock = () => {
+const ExperienceBlock = ({ page }: { page: number }) => {
   return (
     <div className="mb-4">
-      {allExperience.map((experience) => (
+      {allExperience[page].map((experience) => (
         <ExperienceEpisode key={experience.company} experience={experience} />
       ))}
     </div>

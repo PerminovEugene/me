@@ -3,4 +3,6 @@ export type Skill = {
   title: string;
 };
 
-export type Skills = Skill[];
+export type SkillsPage = Skill[];
+
+export type Skills = SkillsPage[];

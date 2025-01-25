@@ -3,15 +3,16 @@ import { Education } from "./education.types";
 
 const EducationEpisode = ({ education }: { education: Education }) => {
   return (
-    <div className="mb-4 text-black">
+    <div className="text-black">
       <h4 className="text-lg font-semibold">{education.degree}</h4>
       <div className="text-sm">
+        <span>{education.place}</span>
         <span className="ml-2">{education.place}</span>
         <span className="ml-2">
           {education.startDate} - {education.endDate}
         </span>
       </div>
-      <div className="mt-2">
+      <div>
         <h5 className="font-semibold">Field of Study:</h5>
         <p className="text-sm">{education.description}</p>
       </div>
@@ -21,8 +22,8 @@ const EducationEpisode = ({ education }: { education: Education }) => {
 
 const EducationBlock = () => {
   return (
-    <div className="mb-4">
-      {allEducation.map((education: Education) => (
+    <div className="flex flex-wrap gap-4">
+      {allEducation.map((education) => (
         <EducationEpisode key={education.place} education={education} />
       ))}
     </div>

@@ -8,4 +8,6 @@ export type Experience = {
   responsibilities: string[];
 };
 
-export type AllExperience = Experience[];
+export type ExperiencePage = Experience[];
+
+export type AllExperience = ExperiencePage[];

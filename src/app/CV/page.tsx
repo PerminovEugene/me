@@ -22,20 +22,35 @@ const CVPage = () => {
   return (
     <div>
       <div
-        className="flex justify-center items-center min-h-screen bg-gray-100"
+        className="flex flex-col justify-center items-center min-h-screen bg-gray-100"
         id="CV"
       >
-        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl">
-          <div className="p-4">
-            <BaseInfo />
-          </div>
+        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 mb-2 print:min-h-screen">
+          <BaseInfo />
           <Block title="Summary">
             <Summary />
           </Block>
           <div className="flex space-x-4">
             <div className="w-3/5">
               <Block title="Experience">
-                <Experience />
+                <Experience page={0} />
+              </Block>
+            </div>
+            <div className="w-2/5">
+              <Block title="Skills">
+                <Skills page={0} />
+              </Block>
+              {/* <Block title="Languages">
+                <Languages />
+              </Block> */}
+            </div>
+          </div>
+        </div>
+        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 print:min-h-screen">
+          <div className="flex space-x-4">
+            <div className="w-3/5">
+              <Block title="Experience">
+                <Experience page={1} />
               </Block>
               <Block title="Education">
                 <Education />
@@ -43,7 +58,7 @@ const CVPage = () => {
             </div>
             <div className="w-2/5">
               <Block title="Skills">
-                <Skills />
+                <Skills page={1} />
               </Block>
               <Block title="Languages">
                 <Languages />

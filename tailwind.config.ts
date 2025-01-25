@@ -15,6 +15,18 @@ export default {
       screens: {
         print: { raw: "print" },
       },
+      theme: {
+        extend: {
+          breakAfter: {
+            page: "page",
+          },
+        },
+      },
+      variants: {
+        extend: {
+          breakAfter: ["print"],
+        },
+      },
     },
   },
   plugins: [],
