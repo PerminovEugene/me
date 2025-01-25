@@ -12,6 +12,8 @@ export const skills: Skills = [
       "Styled-Components",
       "Metamask SDK",
       "ethers.js",
+      "Grapql",
+      "Appolo Client",
     ],
     title: "Front-end",
   },
@@ -26,6 +28,7 @@ export const skills: Skills = [
       "Ruby on Rails",
       "Golang",
       "jin",
+      "GRPC",
     ],
     title: "Back-end",
   },
@@ -75,7 +78,7 @@ export const skills: Skills = [
     title: "Devops",
   },
   {
-    technologies: ["Etherium", "EVM", "Solidity", "Hardhat"],
+    technologies: ["Etherium", "EVM", "Hardhat"],
     title: "WEB3",
   },
 ];

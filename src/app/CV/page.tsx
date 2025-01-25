@@ -29,24 +29,24 @@ const CVPage = () => {
           <div className="p-4">
             <BaseInfo />
           </div>
+          <Block title="Summary">
+            <Summary />
+          </Block>
           <div className="flex space-x-4">
             <div className="w-3/5">
               <Block title="Experience">
                 <Experience />
               </Block>
+              <Block title="Education">
+                <Education />
+              </Block>
             </div>
             <div className="w-2/5">
-              <Block title="Summary">
-                <Summary />
-              </Block>
               <Block title="Skills">
                 <Skills />
               </Block>
               <Block title="Languages">
                 <Languages />
-              </Block>
-              <Block title="Education">
-                <Education />
               </Block>
             </div>
           </div>
