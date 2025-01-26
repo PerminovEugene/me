@@ -5,7 +5,7 @@ const onlyYear = (date: string) => date.split(" ")[1];
 
 const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
   return (
-    <div className="mb-4 text-black">
+    <div className="mb-4 text-black last:mb-0">
       <div className="flex items-center text-md">
         <h4 className="font-semibold">{experience.title}</h4>,
         <span className="ml-1">
@@ -49,7 +49,7 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
 
 const ExperienceBlock = ({ page }: { page: number }) => {
   return (
-    <div className="mb-4">
+    <div>
       {allExperience[page].map((experience) => (
         <ExperienceEpisode key={experience.company} experience={experience} />
       ))}
