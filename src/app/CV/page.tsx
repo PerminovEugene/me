@@ -5,6 +5,7 @@ import Skills from "@/components/cv/skills/skills.component";
 import Education from "@/components/cv/education/education.component";
 import Languages from "@/components/cv/languages/languages.component";
 import Summary from "@/components/cv/summary/summary.component";
+import PetProjects from "@/components/cv/pet-projects/pet-projects.component";
 
 interface BlockProps {
   title: string;
@@ -25,7 +26,7 @@ const CVPage = () => {
         className="flex flex-col justify-center items-center min-h-screen bg-gray-100"
         id="CV"
       >
-        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 mb-2 print:min-h-screen">
+        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mt-0 print:mb-0 mt-8 mb-8 print:min-h-screen">
           <BaseInfo />
           <Block title="Summary">
             <Summary />
@@ -40,13 +41,10 @@ const CVPage = () => {
               <Block title="Skills">
                 <Skills page={0} />
               </Block>
-              {/* <Block title="Languages">
-                <Languages />
-              </Block> */}
             </div>
           </div>
         </div>
-        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 print:min-h-screen">
+        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 print:min-h-screen mb-8">
           <div className="flex space-x-4">
             <div className="w-3/5">
               <Block title="Experience">
@@ -62,6 +60,9 @@ const CVPage = () => {
               </Block>
               <Block title="Languages">
                 <Languages />
+              </Block>
+              <Block title="Pet Projects">
+                <PetProjects />
               </Block>
             </div>
           </div>

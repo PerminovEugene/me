@@ -4,7 +4,7 @@ import { Education } from "./education.types";
 const EducationEpisode = ({ education }: { education: Education }) => {
   return (
     <div className="text-black">
-      <h4 className="text-lg font-semibold">{education.degree}</h4>
+      <h4 className="text-md font-semibold">{education.degree}</h4>
       <div className="text-sm">
         <span>{education.place}</span>
         <span className="ml-2">{education.place}</span>
@@ -12,9 +12,9 @@ const EducationEpisode = ({ education }: { education: Education }) => {
           {education.startDate} - {education.endDate}
         </span>
       </div>
-      <div>
-        <h5 className="font-semibold">Field of Study:</h5>
-        <p className="text-sm">{education.description}</p>
+      <div className="flex">
+        <h5 className="font-semibold text-sm">Field of Study:</h5>
+        <p className="text-sm ml-2">{education.description}</p>
       </div>
     </div>
   );

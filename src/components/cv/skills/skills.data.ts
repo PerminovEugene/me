@@ -16,7 +16,7 @@ export const skills: Skills = [
     },
     {
       technologies: ["Etherium", "EVM", "Hardhat"],
-      title: "WEB3",
+      title: "Blockchain",
     },
     {
       technologies: [
