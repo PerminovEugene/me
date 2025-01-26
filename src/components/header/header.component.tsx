@@ -20,7 +20,7 @@ const Header = () => {
           </ul>
         </nav>
         {currentConfig?.subHeaderComponent && (
-          <div className="bg-gray-800 text-white flex justify-between items-center">
+          <div className="bg-gray-800 text-white items-center">
             {currentConfig.subHeaderComponent()}
           </div>
         )}

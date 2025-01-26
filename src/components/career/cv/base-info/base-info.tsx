@@ -1,4 +1,9 @@
-import { ContactEmail, ContactLink, ContactPhone } from "./contacts";
+import {
+  ContactEmail,
+  ContactGit,
+  ContactLinkedin,
+  ContactPhone,
+} from "./contacts";
 
 const BaseInfo = () => {
   return (
@@ -7,14 +12,15 @@ const BaseInfo = () => {
         Eugene Perminov
       </h1>
       {/* <h2 className="text-2xl text-blue-500">Senior Software Engineer</h2> */}
-      <div className="border-t border-b border-gray-300 border-t-4 border-b-4 py-2 p-4 mb-1">
-        <div className="flex space-x-4 text-sm">
+      <div className="border-t border-b border-gray-300 border-t-4 border-b-4 py-2 p-4 mb-1 flex justify-center">
+        <div className="text-sm  mr-8">
+          <ContactGit address="github.com/PerminovEugene" />
+
+          <ContactLinkedin address="linkedin.com/in/eugene-perminov" />
+        </div>
+        <div className="text-sm align-right">
           <ContactPhone phone="+372-5368-5244" />
           <ContactEmail address="perminov.eugene@gmail.com" />
-        </div>
-        <div className="flex space-x-4 text-sm">
-          <ContactLink address="https://github.com/PerminovEugene" />
-          <ContactLink address="https://www.linkedin.com/in/eugene-perminov" />
         </div>
       </div>
     </div>

@@ -13,8 +13,8 @@ export const metadataBase: Metadata = {
     "Hire Senior Developer",
     "Node.js",
     "React.js",
-    "Backend",
-    "Frontend",
+    "Back-end",
+    "Front-end",
     "Full Stack",
   ],
   openGraph: {

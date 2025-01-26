@@ -45,7 +45,16 @@ Default Next.js structure. App folder contains pages. Pages use components from 
 
 ## 💡 How to Use
 
-Visit `evgenii.perminov.com` and explore
+Visit `evgenii.perminov.com` and explore.
+
+When CV page is updated:
+
+1. `/career/CV` page
+2. Print as PDF
+3. Check that everything is ok in PDF file
+4. Put new PDF to `/public/files/Eugene_Perminov_CV.pdf`
+
+P.S. I know it would be nice to use S3, but this solution is fine for now.
 
 ## 🚀 Future Plans
 

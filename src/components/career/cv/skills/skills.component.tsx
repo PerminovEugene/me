@@ -3,8 +3,8 @@ import { Skill } from "./skills.types";
 
 const SkillDirrection = ({ skill }: { skill: Skill }) => {
   return (
-    <div className="mb-4 text-black last:mb-0">
-      <h4 className="text-md font-semibold">{skill.title}</h4>
+    <div className="mb-3 text-black last:mb-0">
+      <h4 className="text-md font-semibold">{skill.title}:</h4>
       <div className="mt-2">
         {/* <h5 className="font-semibold">Key Skills:</h5> */}
         <div className="flex flex-wrap gap-2">

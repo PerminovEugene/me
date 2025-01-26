@@ -17,8 +17,9 @@
 - **Purpose**: Showcase professional accomplishments and expertise.
 - **Subpages/Tabs**:
   - **[ ] CV**:
-    - [ ] Interactive CV for easy reading. <span style="color: yellow;">(Work in Progress)</span>
-    - [ ] Button to download CV as PDF. <span style="color: yellow;">(Work in Progress)</span>
+    - [x] Create CV page. <span style="color: yellow;">(Done)</span>
+    - [x] Button to download CV as PDF. <span style="color: green;">(Done)</span>
+    - [ ] Add responsive design or lock width
   - **[ ] All-Stack**:
     - [ ] Detailed breakdown of technologies:
       - [ ] Duration of use.
