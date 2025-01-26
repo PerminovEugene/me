@@ -11,9 +11,10 @@ export const allEducation: AllEducation = [
   // },
   {
     place: "Dostoevsky Omsk State University",
+    link: "http://www.univer.omsk.su/departs/math/index.htm",
     degree: "Bachelor",
     startDate: "2011",
     endDate: "2015",
-    description: "Faculty of Math and Computer Science",
+    description: "Applied Mathematics and IT",
   },
 ];

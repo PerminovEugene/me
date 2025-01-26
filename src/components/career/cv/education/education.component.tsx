@@ -4,13 +4,14 @@ import { Education } from "./education.types";
 const EducationEpisode = ({ education }: { education: Education }) => {
   return (
     <div className="text-black">
-      <h4 className="text-md font-semibold">{education.degree}</h4>
+      <h4 className="text-md font-semibold text-blue-500 hover:underline">
+        <a href={education.link} target="_blank">
+          {education.place}
+        </a>
+      </h4>
+      <h4 className="text-md font-semibold">Degree: {education.degree}</h4>
       <div className="text-sm">
-        <span>{education.place}</span>
-        <span className="ml-2">{education.place}</span>
-        <span className="ml-2">
-          {education.startDate} - {education.endDate}
-        </span>
+        {education.startDate} - {education.endDate}
       </div>
       <div className="flex">
         <h5 className="font-semibold text-sm">Field of Study:</h5>

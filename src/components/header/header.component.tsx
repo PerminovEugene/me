@@ -2,18 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { config } from "./config";
+import { headerConfig } from "./config";
 
 const Header = () => {
-  const currentPath = usePathname();
-  const currentConfig = config.find((item) => item.link === currentPath);
-
+  const currentPath = usePathname().split("/")[1];
+  const currentConfig = headerConfig.find((item) => item.path === currentPath);
   return (
     <header className="flex justify-center items-center bg-gray-800 text-white p-4 print:hidden">
       <div className="shadow-md w-full max-w-4xl">
         <nav className="mb-4">
           <ul className="flex space-x-4">
-            {config.map((item) => (
+            {headerConfig.map((item) => (
               <li key={item.link}>
                 <Link href={item.link}>{item.text}</Link>
               </li>
@@ -21,7 +20,7 @@ const Header = () => {
           </ul>
         </nav>
         {currentConfig?.subHeaderComponent && (
-          <div className="mt-4 bg-gray-800 text-white p-4 flex justify-between items-center">
+          <div className="bg-gray-800 text-white flex justify-between items-center">
             {currentConfig.subHeaderComponent()}
           </div>
         )}

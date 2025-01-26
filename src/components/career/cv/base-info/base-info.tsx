@@ -7,7 +7,7 @@ const BaseInfo = () => {
         Eugene Perminov
       </h1>
       {/* <h2 className="text-2xl text-blue-500">Senior Software Engineer</h2> */}
-      <div className="border-t border-b border-gray-300 border-t-4 border-b-4 py-2 p-4">
+      <div className="border-t border-b border-gray-300 border-t-4 border-b-4 py-2 p-4 mb-1">
         <div className="flex space-x-4 text-sm">
           <ContactPhone phone="+372-5368-5244" />
           <ContactEmail address="perminov.eugene@gmail.com" />

@@ -1,13 +1,13 @@
-import { metadataBase } from "../metadata";
+import { metadataBase } from "../../metadata";
 import { Metadata } from "next";
-import Experience from "@/components/cv/experience/experience.component";
-import BaseInfo from "@/components/cv/base-info/base-info";
-import Skills from "@/components/cv/skills/skills.component";
-import Education from "@/components/cv/education/education.component";
-import Languages from "@/components/cv/languages/languages.component";
-import Summary from "@/components/cv/summary/summary.component";
-import PetProjects from "@/components/cv/pet-projects/pet-projects.component";
-import Content from "@/components/cv/content-block/content-block.component";
+import Experience from "@/components/career/cv/experience/experience.component";
+import BaseInfo from "@/components/career/cv/base-info/base-info";
+import Skills from "@/components/career/cv/skills/skills.component";
+import Education from "@/components/career/cv/education/education.component";
+import Languages from "@/components/career/cv/languages/languages.component";
+import Summary from "@/components/career/cv/summary/summary.component";
+import PetProjects from "@/components/career/cv/pet-projects/pet-projects.component";
+import Content from "@/components/career/cv/content-block/content-block.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const CVPage = () => {
   return (
-    <div>
+    <main>
       <div
         className="flex flex-col justify-center items-center min-h-screen bg-gray-100"
         id="CV"
@@ -63,7 +63,7 @@ const CVPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

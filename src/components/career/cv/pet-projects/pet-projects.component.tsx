@@ -3,7 +3,7 @@ import { PetProject } from "./pet-projects.types";
 
 const PetProjectBlock = ({ petProject }: { petProject: PetProject }) => {
   return (
-    <div className="mb-4 text-black">
+    <div className="mb-4 text-black last:mb-0">
       <h4 className="text-md font-semibold">
         <a
           href={petProject.link}

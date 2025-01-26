@@ -16,13 +16,6 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
         <h4 className="font-semibold">{experience.company}</h4>,
         <span className="ml-1">{experience.location}</span>
       </div>
-      {/* <div className="text-sm">
-        <span>{experience.company}</span>
-        <span className="ml-2">{experience.location}</span>
-        <span className="ml-2">
-          {experience.startDate} - {experience.endDate}
-        </span>
-      </div> */}
       {/* <div className="mt-2">
         <h5 className="font-semibold">Tech Stack:</h5>
         <div className="flex flex-wrap gap-2 mt-1">
@@ -34,7 +27,6 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
         </div>
       </div> */}
       <div>
-        {/* <h5 className="font-semibold">Key Responsibilities & Achievements:</h5> */}
         <ul className="list-disc list-inside mt-1">
           {experience.responsibilities.map((item, index) => (
             <li className="text-sm" key={index}>
