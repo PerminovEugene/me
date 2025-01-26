@@ -14,12 +14,12 @@ const PetProjectBlock = ({ petProject }: { petProject: PetProject }) => {
           {petProject.name}
         </a>
       </h4>
-      <div className="mt-2 text-sm flex">
+      <div className="mt-0 text-sm flex">
         <h5 className="font-semibold">Status:</h5>
         <span className="text-gray-600 ml-2">{petProject.status}</span>
       </div>
-      <div className="mt-1">
-        <p className="text-sm text-gray-600">{petProject.description}</p>
+      <ul className="mt-0 list-disc pl-5 mt-1">
+        <li className="text-sm text-gray-600 ">{petProject.description}</li>
         {/* <div className="mt-1">
           <a
             href={petProject.link}
@@ -30,7 +30,7 @@ const PetProjectBlock = ({ petProject }: { petProject: PetProject }) => {
             {petProject.link}
           </a>
         </div> */}
-      </div>
+      </ul>
     </div>
   );
 };

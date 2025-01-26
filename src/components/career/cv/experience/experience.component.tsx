@@ -13,8 +13,12 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
         </span>
       </div>
       <div className="flex items-center text-md">
-        <h4 className="font-semibold">{experience.company}</h4>,
-        <span className="ml-1">{experience.location}</span>
+        <h4 className="font-semibold text-blue-500 hover:underline">
+          <a target="_blank" href={experience.link}>
+            {experience.company}
+          </a>
+        </h4>
+        ,<span className="ml-1">{experience.location}</span>
       </div>
       {/* <div className="mt-2">
         <h5 className="font-semibold">Tech Stack:</h5>
@@ -27,7 +31,7 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
         </div>
       </div> */}
       <div>
-        <ul className="list-disc list-inside mt-1">
+        <ul className="list-disc pl-5 mt-1">
           {experience.responsibilities.map((item, index) => (
             <li className="text-sm" key={index}>
               {item}
@@ -41,7 +45,7 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
 
 const ExperienceBlock = ({ page }: { page: number }) => {
   return (
-    <div>
+    <div className="pb-1">
       {allExperience[page].map((experience) => (
         <ExperienceEpisode key={experience.company} experience={experience} />
       ))}

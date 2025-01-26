@@ -6,6 +6,7 @@ const allExperience: AllExperience = [
       title: "Senior Software Engineer",
       company: "Katana cloud inventory",
       location: "Tallinn, Estonia | Remote",
+      link: "https://katanamrp.com/",
       startDate: "August 2021",
       endDate: "September 2024",
       responsibilities: [
@@ -43,6 +44,7 @@ const allExperience: AllExperience = [
         "Remote Debugging & CI/CD: Implemented a remote debugging server, set up CI/CD pipelines for packaging and delivering new versions of the extension, and integrated gRPC protocol for communication.",
       ],
       stack: ["Node.js", "Typescript", "VSCode API", "GRPC"],
+      link: "https://career.huawei.ru/rri/en/",
     },
   ],
   [
@@ -50,6 +52,7 @@ const allExperience: AllExperience = [
       title: "Full-stack Developer",
       company: "Diversido",
       location: "Remote",
+      link: "https://www.diversido.io/",
       startDate: "May 2018",
       endDate: "August 2020",
       responsibilities: [
@@ -82,6 +85,7 @@ const allExperience: AllExperience = [
       ],
     },
     {
+      link: "https://sellbery.com/",
       title: "Full-stack Developer",
       company: "Ecombix",
       location: "Saint-Petersburg, Russia",
@@ -106,9 +110,10 @@ const allExperience: AllExperience = [
       ],
     },
     {
-      title: "Back-end Developer",
+      title: "Junior Back-end Developer",
       company: "BurningButtons",
       location: "Omsk, Russia",
+      link: "https://burningbuttons.com/",
       startDate: "September 2016",
       endDate: "March 2017",
       responsibilities: [
@@ -117,7 +122,8 @@ const allExperience: AllExperience = [
       stack: ["Node.js", "Express", "PostgreSQL", "Stripe API", "Docker"],
     },
     {
-      title: "Front-End Developer",
+      title: "Junior Front-End Developer",
+      link: "https://7bits.it/",
       company: "7Bits and Avelix",
       location: "Omsk, Russia",
       startDate: "September 2014",

@@ -6,6 +6,7 @@ export type Experience = {
   endDate: string;
   stack: string[];
   responsibilities: string[];
+  link: string;
 };
 
 export type ExperiencePage = Experience[];
