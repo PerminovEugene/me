@@ -9,7 +9,10 @@ const SkillDirrection = ({ skill }: { skill: Skill }) => {
         {/* <h5 className="font-semibold">Key Skills:</h5> */}
         <div className="flex flex-wrap gap-2">
           {skill.technologies.map((tech, index) => (
-            <span key={index} className="bg-gray-300 px-2 py-1 rounded">
+            <span
+              key={index}
+              className="bg-gray-200 px-2 py-0.5 rounded border border-gray-300"
+            >
               {tech}
             </span>
           ))}
