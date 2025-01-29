@@ -1,7 +1,7 @@
 import { ArticleData } from "../../../../components/lib/article/article.types";
 
 const solidityGasOptimizationArticleData: ArticleData = {
-  title: "Solidity gas optimization. Part 1.",
+  title: "Solidity Gas Optimization: Part 1",
   date: "2025-01-29",
   tags: ["Solidity", "Gas Optimization"],
   preview: "Learn the basics of gas optimization in Solidity.",

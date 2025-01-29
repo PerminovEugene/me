@@ -45,7 +45,7 @@ export const routes = {
         next: {
           solidityGasOptimizationArticleData: {
             link: "/career/articles/solidity-gas-optimization-1",
-            text: "Solidity gas optimization. Part 1.",
+            text: "Solidity Gas Optimization: Part 1",
           },
           howToCreatePetProjects: {
             link: "/career/articles/how-to-create-pet-projects",
