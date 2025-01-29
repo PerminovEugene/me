@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const ResourcesPage = () => {
-  return <main className="min-h-screen ">Resources</main>;
+  return <div className="min-h-screen ">Resources</div>;
 };
 
 export default ResourcesPage;

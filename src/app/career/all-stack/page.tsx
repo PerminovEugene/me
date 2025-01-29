@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const AllStackPage = () => {
-  return <main className="min-h-screen ">All stack page</main>;
+  return <div>All stack page</div>;
 };
 
 export default AllStackPage;

@@ -1,11 +1,11 @@
 import React from "react";
 import { Card, CardContent } from "@/components/main/card.component";
-import { routes } from "@/components/header/config";
+import { routes } from "@/routing/routing";
 import Link from "next/link";
 
 const HomePage = () => {
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-6">
+    <div>
       <div className="w-full max-w-4xl text-center py-8">
         <h1 className="text-4xl font-bold mb-4">
           Welcome to Eugene Perminov&apos;s Website
@@ -24,7 +24,7 @@ const HomePage = () => {
               Learn more about my professional experience, skills, and ongoing
               projects.
             </p>
-            <Link className="text-yellow-400" href={routes.career.cv.link}>
+            <Link className="text-yellow-400" href={routes.career.next.cv.link}>
               Explore Career
             </Link>
           </CardContent>
@@ -68,7 +68,7 @@ const HomePage = () => {
           </CardContent>
         </Card>
       </div>
-    </main>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const HealthyLifestylePage = () => {
-  return <main className="min-h-screen ">Healthy Lifestyle page</main>;
+  return <div className="min-h-screen ">Healthy Lifestyle page</div>;
 };
 
 export default HealthyLifestylePage;

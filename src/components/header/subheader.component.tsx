@@ -1,17 +1,20 @@
 "use client";
 
-import { Route } from "@/components/header/config";
+import { isRoute, Routes } from "@/routing/routing";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 
-export const SubHeader = ({ config }: { config: Route }) => {
+export const SubHeader = ({ config }: { config: Routes }) => {
   const routes = Object.values(config);
   const pathParts = usePathname().split("/");
   return (
     <ul className="flex space-x-4">
       {routes.map((route) => {
+        if (!isRoute(route)) {
+          return null;
+        }
         const isSelected = pathParts[2] == route.link.split("/")[2];
         return (
           <li key={route.link}>

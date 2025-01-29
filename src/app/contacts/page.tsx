@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const ContactsPage = () => {
-  return <main className="min-h-screen ">Contacts in progress</main>;
+  return <div className="min-h-screen ">Contacts in progress</div>;
 };
 
 export default ContactsPage;

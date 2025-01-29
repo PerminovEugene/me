@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const MusicPage = () => {
-  return <main className="min-h-screen ">Music page</main>;
+  return <div className="min-h-screen ">Music page</div>;
 };
 
 export default MusicPage;

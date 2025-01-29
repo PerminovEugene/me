@@ -8,6 +8,7 @@ import Languages from "@/components/career/cv/languages/languages.component";
 import Summary from "@/components/career/cv/summary/summary.component";
 import PetProjects from "@/components/career/cv/pet-projects/pet-projects.component";
 import Content from "@/components/career/cv/content-block/content-block.component";
+import { Fragment } from "react";
 
 export const metadata: Metadata = {
   ...metadataBase,
@@ -16,54 +17,49 @@ export const metadata: Metadata = {
 
 const CVPage = () => {
   return (
-    <main>
-      <div
-        className="flex flex-col justify-center items-center min-h-screen bg-gray-100"
-        id="CV"
-      >
-        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mt-0 print:mb-0 mt-8 mb-8 print:min-h-screen">
-          <BaseInfo />
-          <Content title="Summary">
-            <Summary />
-          </Content>
-          <div className="flex space-x-4">
-            <div className="w-3/5">
-              <Content title="Experience">
-                <Experience page={0} />
-              </Content>
-            </div>
-            <div className="w-2/5">
-              <Content title="Skills">
-                <Skills page={0} />
-              </Content>
-            </div>
+    <Fragment>
+      <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 mb-8 print:min-h-screen">
+        <BaseInfo />
+        <Content title="Summary">
+          <Summary />
+        </Content>
+        <div className="flex space-x-4">
+          <div className="w-3/5">
+            <Content title="Experience">
+              <Experience page={0} />
+            </Content>
           </div>
-        </div>
-        <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:mb-0 print:min-h-screen mb-8">
-          <div className="flex space-x-4">
-            <div className="w-3/5">
-              <Content title="Experience">
-                <Experience page={1} />
-              </Content>
-              <Content title="Education">
-                <Education />
-              </Content>
-            </div>
-            <div className="w-2/5">
-              <Content title="Skills">
-                <Skills page={1} />
-              </Content>
-              <Content title="Languages">
-                <Languages />
-              </Content>
-              <Content title="Pet Projects">
-                <PetProjects />
-              </Content>
-            </div>
+          <div className="w-2/5">
+            <Content title="Skills">
+              <Skills page={0} />
+            </Content>
           </div>
         </div>
       </div>
-    </main>
+      <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:min-h-screen">
+        <div className="flex space-x-4">
+          <div className="w-3/5">
+            <Content title="Experience">
+              <Experience page={1} />
+            </Content>
+            <Content title="Education">
+              <Education />
+            </Content>
+          </div>
+          <div className="w-2/5">
+            <Content title="Skills">
+              <Skills page={1} />
+            </Content>
+            <Content title="Languages">
+              <Languages />
+            </Content>
+            <Content title="Pet Projects">
+              <PetProjects />
+            </Content>
+          </div>
+        </div>
+      </div>
+    </Fragment>
   );
 };
 

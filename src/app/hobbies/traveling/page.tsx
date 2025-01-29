@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const TravelingPage = () => {
-  return <main className="min-h-screen ">Traveling page</main>;
+  return <div className="min-h-screen ">Traveling page</div>;
 };
 
 export default TravelingPage;
