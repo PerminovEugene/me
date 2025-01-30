@@ -7,8 +7,22 @@ export type Experience = {
   stack: string[];
   responsibilities: string[];
   link: string;
+  months: number;
+  type: ExperienceType;
+  status: ProductStatus;
 };
 
-export type ExperiencePage = Experience[];
+export enum ExperienceType {
+  Commercial = "Commercial",
+  PetProject = "PetProject",
+}
+
+export enum ProductStatus {
+  InProgress = "In Progress",
+  InProduction = "In Production",
+  Unknown = "Unknown",
+}
+
+export type ExperiencePage = Experience;
 
 export type AllExperience = ExperiencePage[];

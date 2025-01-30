@@ -20,16 +20,6 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
         </h4>
         ,<span className="ml-1">{experience.location}</span>
       </div>
-      {/* <div className="mt-2">
-        <h5 className="font-semibold">Tech Stack:</h5>
-        <div className="flex flex-wrap gap-2 mt-1">
-          {experience.stack.map((tech, index) => (
-            <span key={index} className="bg-gray-300 px-2 py-1 rounded">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div> */}
       <div>
         <ul className="list-disc pl-5 mt-1">
           {experience.responsibilities.map((item, index) => (
@@ -44,9 +34,11 @@ const ExperienceEpisode = ({ experience }: { experience: Experience }) => {
 };
 
 const ExperienceBlock = ({ page }: { page: number }) => {
+  const exp =
+    page === 0 ? allExperience.slice(0, 2) : allExperience.slice(2, 6); // CV is splited on pages. First page contains 2 items
   return (
     <div className="pb-1">
-      {allExperience[page].map((experience) => (
+      {exp.map((experience) => (
         <ExperienceEpisode key={experience.company} experience={experience} />
       ))}
     </div>
