@@ -54,7 +54,6 @@ export enum Technologies {
   Mocha = "Mocha",
   Chai = "Chai",
   Supertest = "Supertest",
-  Puppeteer = "Puppeteer",
   Cypress = "Cypress",
   Protractor = "Protractor",
 
