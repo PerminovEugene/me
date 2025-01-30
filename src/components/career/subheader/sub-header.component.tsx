@@ -6,7 +6,6 @@ const CareerSubHeader = () => {
   return (
     <div className="flex justify-between items-center">
       <SubHeader config={routes.career.next} />
-      {/* <ul className="flex space-x-4"></ul> */}
       <a
         href="/files/Eugene_Perminov_CV.pdf"
         target="_blank"

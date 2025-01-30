@@ -11,7 +11,7 @@ const PetProjectBlock = ({ experience }: { experience: Experience }) => {
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
         >
-          {experience.company}
+          {experience.title}
         </a>
       </h4>
       <div className="mt-0 text-sm flex">
@@ -19,17 +19,7 @@ const PetProjectBlock = ({ experience }: { experience: Experience }) => {
         <span className="text-gray-600 ml-2">{experience.status}</span>
       </div>
       <ul className="mt-0 list-disc pl-5 mt-1">
-        <li className="text-sm text-gray-600 ">{experience.title}</li>
-        {/* <div className="mt-1">
-          <a
-            href={petProject.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            {petProject.link}
-          </a>
-        </div> */}
+        <li className="text-sm text-gray-600 ">{experience.company}</li>
       </ul>
     </div>
   );

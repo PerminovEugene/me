@@ -1,3 +1,4 @@
+// TODO use experience data
 export const projects = [
   {
     name: "Real one chess king",

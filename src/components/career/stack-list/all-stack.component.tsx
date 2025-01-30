@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Technologies } from "@/components/career/cv/experience/technologies";
 import allExperience from "@/components/career/cv/experience/experience.data";
 import Skillbox from "@/components/lib/skillbox/skillbox.component";
+import { UsedTechnology } from "../cv/experience/experience.types";
 
 const AllStackComponent = () => {
   const [selectedTechnology, setSelectedTechnology] =
@@ -14,14 +15,20 @@ const AllStackComponent = () => {
   };
 
   const filteredExperience = selectedTechnology
-    ? allExperience
-        .flat()
-        .filter((experience) => experience.stack.includes(selectedTechnology))
+    ? allExperience.filter((experience) =>
+        experience.stack.some(
+          (t: UsedTechnology) => t.technology === selectedTechnology
+        )
+      )
     : [];
 
   const totalExperienceMonths = selectedTechnology
     ? allExperience.reduce((acc, experience) => {
-        if (experience.stack.includes(selectedTechnology)) {
+        if (
+          experience.stack.some(
+            (t: UsedTechnology) => t.technology === selectedTechnology
+          )
+        ) {
           acc += experience.months;
         }
         return acc;
@@ -54,16 +61,10 @@ const AllStackComponent = () => {
               <h2 className="text-2xl font-semibold mb-4">
                 Total experience with {selectedTechnology}:
               </h2>
-              {totalYears > 0 && (
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                  {totalYears} years
-                </div>
-              )}
-              {months > 0 && (
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                  {months} months
-                </div>
-              )}
+              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                {totalYears > 0 && <span>{totalYears} years </span>}
+                {months > 0 && <span>{months} months</span>}
+              </div>
             </div>
             <div className="mt-8">
               <h2 className="text-2xl font-semibold mb-4">
