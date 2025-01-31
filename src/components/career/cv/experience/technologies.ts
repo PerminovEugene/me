@@ -26,6 +26,7 @@ export enum Technologies {
   ApolloClient = "Apollo Client",
   TwitterFlight = "Twitter Flight",
   Jquery = "Jquery",
+  VSCodeAPI = "VSCode API",
 
   // Back-end
   NodeJs = "Node.js",
@@ -35,8 +36,7 @@ export enum Technologies {
   LoopBack4 = "LoopBack 4",
   RubyOnRails = "Ruby on Rails",
   Gin = "Gin",
-  GRPC = "gRPC",
-  REST = "REST",
+  SocketIO = "Socket.io",
   Microservices = "Microservices",
 
   // Databases
@@ -87,9 +87,117 @@ export enum Technologies {
   CriticalThinking = "Critical Thinking",
   TimeManagement = "Time Management",
 
-  // Miscellaneous
-  VSCodeAPI = "VSCode API",
+  // Protocols
   Websockets = "Websockets",
-  SocketIO = "Socket.io",
   FHIR = "FHIR",
+  GRPC = "gRPC",
+  REST = "REST",
 }
+
+export enum TechType {
+  ProgrammingLanguages = "Programming Languages",
+  FrontEnd = "Front-end",
+  BackEnd = "Back-end",
+  Databases = "Databases",
+  Testing = "Testing",
+  DevOps = "DevOps",
+  Blockchain = "Blockchain",
+  ThirdPartyIntegrations = "3rd-Party Integrations",
+  SoftSkills = "Soft Skills",
+  Protocols = "Protocols",
+}
+
+export const technologyToType: { [key in Technologies]: TechType } = {
+  // Programming Languages
+  [Technologies.TypeScript]: TechType.ProgrammingLanguages,
+  [Technologies.JavaScript]: TechType.ProgrammingLanguages,
+  [Technologies.Ruby]: TechType.ProgrammingLanguages,
+  [Technologies.Go]: TechType.ProgrammingLanguages,
+  [Technologies.Solidity]: TechType.ProgrammingLanguages,
+  [Technologies.HTML5]: TechType.ProgrammingLanguages,
+  [Technologies.SQL]: TechType.ProgrammingLanguages,
+  [Technologies.GraphQL]: TechType.ProgrammingLanguages,
+
+  // Front-end
+  [Technologies.React]: TechType.FrontEnd,
+  [Technologies.Redux]: TechType.FrontEnd,
+  [Technologies.ReduxSaga]: TechType.FrontEnd,
+  [Technologies.Svelte]: TechType.FrontEnd,
+  [Technologies.Angular2]: TechType.FrontEnd,
+  [Technologies.Webpack]: TechType.FrontEnd,
+  [Technologies.NextJs]: TechType.FrontEnd,
+  [Technologies.MetaMaskSDK]: TechType.FrontEnd,
+  [Technologies.EthersJs]: TechType.FrontEnd,
+  [Technologies.CSS3]: TechType.FrontEnd,
+  [Technologies.StyledComponents]: TechType.FrontEnd,
+  [Technologies.Tailwind]: TechType.FrontEnd,
+  [Technologies.MaterialUI]: TechType.FrontEnd,
+  [Technologies.ApolloClient]: TechType.FrontEnd,
+  [Technologies.TwitterFlight]: TechType.FrontEnd,
+  [Technologies.Jquery]: TechType.FrontEnd,
+  [Technologies.VSCodeAPI]: TechType.FrontEnd,
+
+  // Back-end
+  [Technologies.NodeJs]: TechType.BackEnd,
+  [Technologies.Express]: TechType.BackEnd,
+  [Technologies.NestJs]: TechType.BackEnd,
+  [Technologies.LoopBack3]: TechType.BackEnd,
+  [Technologies.LoopBack4]: TechType.BackEnd,
+  [Technologies.RubyOnRails]: TechType.BackEnd,
+  [Technologies.Gin]: TechType.BackEnd,
+  [Technologies.SocketIO]: TechType.BackEnd,
+  [Technologies.Microservices]: TechType.BackEnd,
+
+  // Databases
+  [Technologies.PostgreSQL]: TechType.Databases,
+  [Technologies.MongoDB]: TechType.Databases,
+  [Technologies.Redis]: TechType.Databases,
+  [Technologies.Elasticsearch]: TechType.Databases,
+  [Technologies.Mongoose]: TechType.Databases,
+  [Technologies.Kafka]: TechType.Databases,
+  [Technologies.RabbitMQ]: TechType.Databases,
+
+  // Testing
+  [Technologies.Jest]: TechType.Testing,
+  [Technologies.Enzyme]: TechType.Testing,
+  [Technologies.Mocha]: TechType.Testing,
+  [Technologies.Chai]: TechType.Testing,
+  [Technologies.Supertest]: TechType.Testing,
+  [Technologies.Cypress]: TechType.Testing,
+  [Technologies.Protractor]: TechType.Testing,
+
+  // DevOps
+  [Technologies.Docker]: TechType.DevOps,
+  [Technologies.Kubernetes]: TechType.DevOps,
+  [Technologies.AWS]: TechType.DevOps,
+  [Technologies.GithubActions]: TechType.DevOps,
+  [Technologies.Aptible]: TechType.DevOps,
+  [Technologies.Okteto]: TechType.DevOps,
+  [Technologies.Datadog]: TechType.DevOps,
+  [Technologies.Debezium]: TechType.DevOps,
+  [Technologies.Heroku]: TechType.DevOps,
+
+  // Blockchain
+  [Technologies.Ethereum]: TechType.Blockchain,
+  [Technologies.EVM]: TechType.Blockchain,
+  [Technologies.Hardhat]: TechType.Blockchain,
+
+  // 3rd-Party Integrations
+  [Technologies.StripeAPI]: TechType.ThirdPartyIntegrations,
+  [Technologies.EtsyAPI]: TechType.ThirdPartyIntegrations,
+  [Technologies.ShopifyAPI]: TechType.ThirdPartyIntegrations,
+  [Technologies.MagentoAPI]: TechType.ThirdPartyIntegrations,
+
+  // Soft Skills
+  [Technologies.Scrum]: TechType.SoftSkills,
+  [Technologies.Adaptability]: TechType.SoftSkills,
+  [Technologies.Agile]: TechType.SoftSkills,
+  [Technologies.Leadership]: TechType.SoftSkills,
+  [Technologies.CriticalThinking]: TechType.SoftSkills,
+  [Technologies.TimeManagement]: TechType.SoftSkills,
+
+  [Technologies.Websockets]: TechType.Protocols,
+  [Technologies.FHIR]: TechType.Protocols,
+  [Technologies.GRPC]: TechType.Protocols,
+  [Technologies.REST]: TechType.Protocols,
+};

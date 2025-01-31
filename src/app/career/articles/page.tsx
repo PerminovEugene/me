@@ -1,9 +1,9 @@
 import { metadataBase } from "../../metadata";
 import { Metadata } from "next";
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import solidityGasOptimizationArticleData from "./solidity-gas-optimization-1/data";
-import howToCreatePetProjectsArticleData from "./how-to-create-pet-projects/data";
+// import howToCreatePetProjectsArticleData from "./how-to-create-pet-projects/data";
 
 export const metadata: Metadata = {
   ...metadataBase,
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 const articles = [
   solidityGasOptimizationArticleData,
-  howToCreatePetProjectsArticleData,
+  // howToCreatePetProjectsArticleData,
   // Add more articles here
 ];
 
 const ArticlesPage = () => {
   return (
-    <div className="">
+    <Fragment>
       <h1 className="text-4xl font-bold mb-8">Articles</h1>
       <div className="w-full max-w-4xl space-y-6">
         {articles.map((article, index) => (
@@ -37,7 +37,7 @@ const ArticlesPage = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </Fragment>
   );
 };
 

@@ -35,10 +35,10 @@ export const routes = {
         link: "/career/all-stack",
         text: "All Stack",
       },
-      resources: {
-        link: "/career/resources",
-        text: "Resources",
-      },
+      // resources: {
+      //   link: "/career/resources",
+      //   text: "Resources",
+      // },
       articles: {
         link: "/career/articles",
         text: "Articles",
@@ -80,5 +80,11 @@ export const routes = {
   contacts: {
     link: "/contacts",
     text: "Contacts",
+    next: {
+      thankYou: {
+        link: "/contacts/thank-you",
+        text: "Thank you",
+      },
+    },
   },
 };

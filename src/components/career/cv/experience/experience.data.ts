@@ -342,7 +342,6 @@ const allExperience: AllExperience = [
     responsibilities: [],
     months: 3,
     stack: [
-      { technology: Technologies.NestJs },
       { technology: Technologies.NextJs },
       { technology: Technologies.Websockets },
       { technology: Technologies.React },

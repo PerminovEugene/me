@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Card, CardContent } from "@/components/main/card.component";
 import { routes } from "@/routing/routing";
 import Link from "next/link";
 
 const HomePage = () => {
   return (
-    <div>
+    <Fragment>
       <div className="w-full max-w-4xl text-center py-8">
         <h1 className="text-4xl font-bold mb-4">
           Welcome to Eugene Perminov&apos;s Website
@@ -68,7 +68,7 @@ const HomePage = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
