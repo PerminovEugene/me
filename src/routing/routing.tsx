@@ -23,7 +23,7 @@ export const isSubRoute = (obj: any): obj is SubRoute => {
 export const routes = {
   main: {
     link: "/",
-    text: "About Me",
+    text: "Main",
   },
   career: {
     next: {
@@ -53,10 +53,10 @@ export const routes = {
           },
         },
       },
-      projects: {
-        link: "/career/projects",
-        text: "Projects",
-      },
+      // projects: {
+      //   link: "/career/projects",
+      //   text: "Projects",
+      // },
     },
   },
   // hobbies

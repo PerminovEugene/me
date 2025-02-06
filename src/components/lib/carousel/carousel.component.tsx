@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface CarouselProps {
@@ -23,10 +24,12 @@ export const Carousel = ({ images }: CarouselProps) => {
 
   return (
     <div className="relative w-full h-64 mb-4">
-      <img
+      <Image
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
         className="w-full h-full object-cover rounded-lg"
+        width={400}
+        height={400}
       />
       <button
         onClick={handlePrev}

@@ -6,6 +6,8 @@ import Article, {
 } from "@/components/lib/article/article.component";
 import SolidityGasOptimizationArticleData from "./data";
 import Section from "@/components/lib/section/section.component";
+import Accordion from "@/components/lib/accordion/accordion.component";
+import Image from "next/image";
 
 const HowToCreatePetProjectPage = () => {
   return (
@@ -140,6 +142,17 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
           </Link>
         </p>
       </Section>
+      <Section>
+        <Accordion text="Here is your meme reward for finishing the article: (click me!)">
+          <Image
+            src="/files/memes/gas-optimization-part-1.png"
+            alt="gas-meme"
+            width={700}
+            height={700}
+          />
+        </Accordion>
+      </Section>
+
       {/* <Section></Section> */}
     </Article>
   );

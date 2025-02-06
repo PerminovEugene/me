@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const AllStackPage = () => {
   return (
     <Fragment>
-      <h1 className="text-4xl font-bold mb-8">All Technologies</h1>
+      <h1 className="text-4xl font-bold mb-8">All Stack</h1>
       <div className="w-full max-w-4xl space-y-6">
         <AllStackComponent />
       </div>

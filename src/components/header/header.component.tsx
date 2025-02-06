@@ -12,24 +12,26 @@ const Header = () => {
     (item) => item.path === firstLevelPath
   );
   return (
-    <header className="flex justify-center items-center bg-gray-800 text-white p-4 print:hidden">
-      <div className="shadow-md w-full max-w-4xl">
-        <nav className="mb-4">
-          <ul className="flex space-x-4">
+    <header className="flex flex-col items-center bg-gray-800 text-white print:hidden pt-3">
+      <div className="shadow-md w-full max-w-4xl text-lg ">
+        <nav className="">
+          <ul className="flex space-x-6 p-2">
             {headerConfig.map((item) => {
               const isSelected =
                 item.path === firstLevelPath ||
                 item.link === `/${firstLevelPath}`;
-              console.log(item, firstLevelPath);
               return (
                 <li key={item.link}>
                   <Link
-                    className={classNames({
-                      "text-yellow-300": isSelected,
-                      "text-white": !isSelected,
-                      "hover:text-yellow-500": isSelected,
-                      "hover:text-blue-200": !isSelected,
-                    })}
+                    className={classNames(
+                      "mr-6 transition duration-300 ease-in-out",
+                      {
+                        "text-yellow-300": isSelected,
+                        "text-white": !isSelected,
+                        "hover:text-yellow-500": isSelected,
+                        "hover:text-blue-200": !isSelected,
+                      }
+                    )}
                     href={item.link}
                   >
                     {item.text}
@@ -39,12 +41,14 @@ const Header = () => {
             })}
           </ul>
         </nav>
-        {subHeaderConfig?.subHeaderComponent && (
-          <div className="bg-gray-800 text-white items-center">
-            {subHeaderConfig.subHeaderComponent()}
-          </div>
-        )}
       </div>
+      {subHeaderConfig?.subHeaderComponent ? (
+        <div className="w-full bg-gradient-to-b from-[#1f2937] via-gray-800 to-gray-900 text-white p-2 transition-all duration-1000 ease-in-out flex justify-center">
+          {subHeaderConfig.subHeaderComponent()}
+        </div>
+      ) : (
+        <div className="w-full bg-gradient-to-b from-[#1f2937] via-gray-800 to-gray-900 p-2 transition-all duration-1000 ease-in-out"></div>
+      )}
     </header>
   );
 };
