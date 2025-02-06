@@ -47,7 +47,7 @@ const Header = () => {
           {subHeaderConfig.subHeaderComponent()}
         </div>
       ) : (
-        <div className="w-full bg-gradient-to-b from-[#1f2937] via-gray-800 to-gray-900 p-2 transition-all duration-1000 ease-in-out"></div>
+        <div className="w-full bg-gradient-to-b from-[#1f2937] via-gray-800 to-gray-900 h-[30px] transition-all duration-1000 ease-in-out"></div>
       )}
     </header>
   );

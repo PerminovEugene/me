@@ -6,11 +6,24 @@ import {
 import { Technologies } from "./technologies";
 
 const calculateMonths = (startDate: string, endDate: string): number => {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
+  const parseDate = (dateStr: string) => {
+    // Convert "August 2021" to "2021-08-01" for safary, it's more strict
+    const parsedDate = new Date(dateStr);
+    if (isNaN(parsedDate.getTime())) {
+      const [monthStr, yearStr] = dateStr.split(" ");
+      const month = new Date(`${monthStr} 1, ${yearStr}`).getMonth();
+      return new Date(parseInt(yearStr, 10), month, 1);
+    }
+    return parsedDate;
+  };
+
+  const start = parseDate(startDate);
+  const end = parseDate(endDate);
+
   return (
     (end.getFullYear() - start.getFullYear()) * 12 +
-    (end.getMonth() - start.getMonth())
+    (end.getMonth() - start.getMonth()) +
+    1
   );
 };
 
@@ -222,7 +235,6 @@ const allExperience: AllExperience = [
       { technology: Technologies.Agile },
       { technology: Technologies.TimeManagement },
       { technology: Technologies.Websockets },
-      { technology: Technologies.FHIR },
     ],
     type: ExperienceType.Commercial,
     status: ProductStatus.InProduction,
@@ -286,6 +298,7 @@ const allExperience: AllExperience = [
       { technology: Technologies.CriticalThinking },
       { technology: Technologies.TimeManagement },
       { technology: Technologies.Jquery },
+      { technology: Technologies.FHIR },
     ],
     type: ExperienceType.Commercial,
     status: ProductStatus.InProduction,

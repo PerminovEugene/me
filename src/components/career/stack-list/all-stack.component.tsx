@@ -37,7 +37,9 @@ const TechnologyExperience = ({ technology }: { technology: Technologies }) => {
 
   const calculateExperience = (type: string) => {
     return filteredExperience.reduce((acc, experience) => {
+      console.log(acc, experience);
       if (experience.type === type) {
+        console.log(acc, experience.months);
         acc += experience.months;
       }
       return acc;

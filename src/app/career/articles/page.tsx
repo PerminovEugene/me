@@ -26,13 +26,13 @@ const ArticlesPage = () => {
             href={article.link}
             key={index}
             target="_self"
-            className="hover:pointer"
+            className="hover:cursor-pointer "
           >
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg mb-5">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg mb-5 cursor-pointer border border-transparent hover:border-dotted hover:border-yellow-500 p-4">
               <h2 className="text-2xl font-semibold mb-2">{article.title}</h2>
               <p className="text-sm text-gray-400 mb-2">{article.date}</p>
               <p className="text-gray-300 mb-4">{article.preview}</p>
-              Click to read more
+              <p className="text-blue-300 underline">Click to read more</p>
             </div>
           </Link>
         ))}
