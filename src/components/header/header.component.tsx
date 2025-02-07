@@ -2,29 +2,53 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { headerConfig } from "./config";
+import { headerConfig, HeaderConfig } from "./config";
 import classNames from "classnames";
+import { Line, HeaderEntity } from "./design";
+import Image from "next/image";
 
-const Header = () => {
-  const pathParts = usePathname().split("/");
-  const firstLevelPath = pathParts[1];
-  const subHeaderConfig = headerConfig.find(
-    (item) => item.path === firstLevelPath
-  );
+export const HeaderLevel = ({
+  headerConfig,
+  text,
+  level,
+}: {
+  headerConfig: HeaderConfig;
+  level: number;
+  text: string;
+}) => {
+  const path = usePathname();
+  const pathParts = path.split("/");
+  const levelPath = pathParts[level];
+  const subHeaderConfig = headerConfig.find((item) => {
+    // if (level === 2) {
+    //   console.log("---------");
+    //   console.log("pathParts", pathParts);
+    //   console.log("config link parts", item.link?.split("/"));
+    //   console.log("level", level);
+    //   console.log("item link level", item.path?.split("/")[level]);
+    //   console.log("levelPath", levelPath);
+    // }
+
+    console.log(path, item.link);
+    return item.path === levelPath;
+  });
+
   return (
-    <header className="flex flex-col items-center bg-gray-800 text-white print:hidden pt-3">
-      <div className="shadow-md w-full max-w-4xl text-lg ">
-        <nav className="">
-          <ul className="flex space-x-6 p-2">
+    <div>
+      <HeaderEntity>
+        <div className="border-b-2 border-dotted border-white text-center">
+          {text}
+        </div>
+        <nav className="mt-2">
+          <ul className="flex flex-col space-y-2">
             {headerConfig.map((item) => {
               const isSelected =
-                item.path === firstLevelPath ||
-                item.link === `/${firstLevelPath}`;
+                item.path === levelPath || item.link === `/${levelPath}`;
               return (
                 <li key={item.link}>
                   <Link
                     className={classNames(
-                      "mr-6 transition duration-300 ease-in-out",
+                      "transition duration-300 ease-in-out",
                       {
                         "text-yellow-300": isSelected,
                         "text-white": !isSelected,
@@ -41,14 +65,32 @@ const Header = () => {
             })}
           </ul>
         </nav>
-      </div>
+      </HeaderEntity>
+
       {subHeaderConfig?.subHeaderComponent ? (
-        <div className="w-full bg-gradient-to-b from-[#1f2937] via-gray-800 to-gray-900 text-white p-2 transition-all duration-1000 ease-in-out flex justify-center">
+        <>
+          <Line />
           {subHeaderConfig.subHeaderComponent()}
-        </div>
+        </>
       ) : (
-        <div className="w-full bg-gradient-to-b from-[#1f2937] via-gray-800 to-gray-900 h-[30px] transition-all duration-1000 ease-in-out"></div>
+        <div className="w-full h-[30px] transition-all duration-1000 ease-in-out"></div>
       )}
+    </div>
+  );
+};
+
+const Header = () => {
+  return (
+    <header className="flex flex-col items-start bg-gray-800 text-white print:hidden p-3 fixed left-0 top-0 h-full border-r-2 border-dotted border-white">
+      <HeaderLevel headerConfig={headerConfig} text="Navigation" level={1} />
+
+      <Image
+        className="mt-auto self-center pb-3"
+        src="/files/design/logo-removebg-preview.png"
+        alt="gas-meme"
+        width={150}
+        height={150}
+      />
     </header>
   );
 };

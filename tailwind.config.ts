@@ -27,6 +27,9 @@ export default {
           breakAfter: ["print"],
         },
       },
+      spacing: {
+        "46": "11.5rem", // 46 * 0.25rem = 11.5rem
+      },
     },
   },
   plugins: [],

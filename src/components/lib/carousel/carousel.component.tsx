@@ -23,7 +23,7 @@ export const Carousel = ({ images }: CarouselProps) => {
   };
 
   return (
-    <div className="relative w-full h-64 mb-4">
+    <div className="relative w-full h-40 mb-4">
       <Image
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}

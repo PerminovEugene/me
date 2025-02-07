@@ -18,7 +18,7 @@ const ContactsPage = () => {
         {/* UI Block */}
         <div className="relative flex flex-col items-center text-center border-2 border-white border-dashed rounded-lg  w-[400px] shadow-lg">
           <div className="absolute -top-5 bg-[#101a2d] px-4 text-white font-bold">
-            🖥 UI Component
+            Fill the contact form
           </div>
           <div className="w-full">
             <ContactsForm />
@@ -73,7 +73,7 @@ const ContactsPage = () => {
         {/* Server Block */}
         <div className="relative flex flex-col items-center text-center border-2 border-white border-dashed rounded-lg p-8 w-[400px] shadow-lg">
           <div className="absolute -top-5 bg-[#101a2d] px-4 text-white font-bold">
-            📡 Message Processing Unit
+            Message Processing Unit
           </div>
           <Image
             src="/files/design/cat-with-mails.webp"

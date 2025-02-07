@@ -1,8 +1,8 @@
 import { routes } from "@/routing/routing";
-import CareerSubHeader from "../career/subheader/sub-header.component";
+import CareerSubHeader from "../career/subheader/career-sub-header.component";
 // import HobbiesSubHeader from "../hobbies/subheader/sub-header.component";
 
-type HeaderConfig = {
+export type HeaderConfig = {
   path?: string;
   link: string;
   text: string;
@@ -11,6 +11,7 @@ type HeaderConfig = {
 
 export const headerConfig: HeaderConfig = [
   {
+    path: "/",
     link: routes.main.link,
     text: routes.main.text,
     subHeaderComponent: null,
@@ -28,6 +29,7 @@ export const headerConfig: HeaderConfig = [
   //   subHeaderComponent: HobbiesSubHeader,
   // },
   {
+    path: "contacts",
     link: routes.contacts.link,
     text: "Contacts",
     subHeaderComponent: null,
