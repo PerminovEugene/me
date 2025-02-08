@@ -55,42 +55,30 @@ export const Line = () => {
 
 // Diagonal Line Component
 export const DiagonalLine = () => {
-  const isSmall = useSmallLine();
-
   return (
     <div className="w-16 flex items-center">
       <svg
         width="60"
-        height={isSmall ? "40" : "60"}
-        viewBox={`0 0 60 ${isSmall ? "70" : "100"}`}
+        height={"60"}
+        viewBox={`0 0 60 100`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         {/* Horizontal Line from Left */}
-        <line
-          x1="5"
-          y1="5"
-          x2={isSmall ? "35" : "50"}
-          y2="5"
-          stroke="white"
-          strokeWidth="2.5"
-        />
+        <line x1="5" y1="5" x2={"50"} y2="5" stroke="white" strokeWidth="2.5" />
 
         {/* Vertical Line Going Down */}
         <line
-          x1={isSmall ? "35" : "50"}
+          x1={"50"}
           y1="5"
-          x2={isSmall ? "35" : "50"}
-          y2={isSmall ? "55" : "95"}
+          x2={"50"}
+          y2={"95"}
           stroke="white"
           strokeWidth="2.5"
         />
 
         {/* Arrow */}
-        <polygon
-          points={isSmall ? "35,55 25,45 45,45" : "50,95 40,80 60,80"}
-          fill="white"
-        />
+        <polygon points={"50,95 40,80 60,80"} fill="white" />
       </svg>
     </div>
   );
