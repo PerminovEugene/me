@@ -9,7 +9,7 @@ export const useSmallLine = () => {
   const [isSmall, setIsSmall] = useState(false); // ✅ Default false to avoid SSR mismatch
 
   useEffect(() => {
-    const checkSize = () => setIsSmall(window.innerHeight < 768);
+    const checkSize = () => setIsSmall(window.innerWidth < 768);
 
     checkSize(); // Set initial value after mount
     window.addEventListener("resize", checkSize);

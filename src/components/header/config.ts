@@ -2,12 +2,20 @@ import { routes } from "@/routing/routing";
 import CareerSubHeader from "../career/subheader/career-sub-header.component";
 // import HobbiesSubHeader from "../hobbies/subheader/sub-header.component";
 
-export type HeaderConfig = {
+export type HeaderConfigItem = {
   path?: string;
   link: string;
   text: string;
-  subHeaderComponent: (() => React.JSX.Element) | null;
-}[];
+  subHeaderComponent:
+    | (({
+        onSelected,
+      }: {
+        onSelected: (item: HeaderConfigItem) => void;
+      }) => React.JSX.Element)
+    | null;
+};
+
+export type HeaderConfig = HeaderConfigItem[];
 
 export const headerConfig: HeaderConfig = [
   {

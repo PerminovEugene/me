@@ -3,7 +3,7 @@
 import { routes } from "@/routing/routing";
 import React from "react";
 import { HeaderLevel } from "@/components/header/header-level.component";
-import { HeaderConfig } from "@/components/header/config";
+import { HeaderConfig, HeaderConfigItem } from "@/components/header/config";
 import { HeaderEntity } from "@/components/header/design";
 
 const CVSubHeader = () => {
@@ -47,7 +47,11 @@ export const careerSubHeaderConfig: HeaderConfig = [
   },
 ];
 
-const CareerSubHeader = () => {
+const CareerSubHeader = ({
+  onSelected,
+}: {
+  onSelected: (item: HeaderConfigItem) => void;
+}) => {
   return (
     <div className="flex justify-between">
       <div className="flex-1 flex flex-col items-start">
@@ -55,6 +59,7 @@ const CareerSubHeader = () => {
           headerConfig={careerSubHeaderConfig}
           text="Career"
           level={2}
+          onSelected={onSelected}
         />
       </div>
     </div>

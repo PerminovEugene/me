@@ -2,7 +2,7 @@
 
 import { headerConfig } from "./config";
 import classNames from "classnames";
-import { DiagonalLine, useSmallLine } from "./design";
+import { DiagonalLine } from "./design";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HeaderLevel } from "./header-level.component";
@@ -12,23 +12,23 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<null | boolean>(null);
   const [isMd, setIsMd] = useState<null | boolean>(null);
 
-  const isSmall = useSmallLine();
-
   useEffect(() => {
     const handleResize = () => {
-      if (isSmall && !isMd) {
-        setIsMd(true);
-        setIsMenuOpen(true);
-      } else if (!isSmall && isMd) {
+      console.log(window.innerWidth < 768, isMd);
+      if (window.innerWidth < 768 && (isMd || isMd === null)) {
         setIsMd(false);
         setIsMenuOpen(false);
+      } else if (window.innerWidth > 768 && (!isMd || isMd === null)) {
+        setIsMd(true);
+        setIsMenuOpen(true);
       }
     };
 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isMd]);
 
   useEffect(() => {
     if (!isMd) {
@@ -50,7 +50,12 @@ const Header = () => {
     <>
       <HiddenArea
         isVisible={!!isMenuOpen}
-        onClick={() => setIsMenuOpen(false)}
+        onClick={() => {
+          console.log(isMd);
+          if (!isMd) {
+            setIsMenuOpen(false);
+          }
+        }}
       />
       <header
         className={classNames(
@@ -71,6 +76,12 @@ const Header = () => {
             headerConfig={headerConfig}
             text="Navigation"
             level={1}
+            onSelected={(item) => {
+              if (window.innerWidth > 764) return;
+              if (!item.subHeaderComponent && item.link) {
+                setIsMenuOpen(false);
+              }
+            }}
           />
         </div>
         <Image

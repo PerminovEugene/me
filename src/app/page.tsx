@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="w-full text-white">
       {/* Section 1 - About Me */}
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 text-center md:text-left">
-        <div className="md:w-1/2 p-5 md:pl-20">
+        <div className="lg:w-1/2 p-5 lg:pl-20 md:pl-10">
           <h1 className="text-5xl font-bold mb-6">
             Hi, I&apos;m Eugene Perminov
           </h1>
@@ -18,7 +18,7 @@ const HomePage = () => {
             journey.
           </p>
         </div>
-        <div className="md:w-1/2 flex justify-center">
+        <div className="lg:w-1/2 flex justify-center">
           <Image
             src="/files/design/me.jpg"
             alt="Eugene Perminov"
