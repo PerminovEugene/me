@@ -1,15 +1,20 @@
+"use client";
+
 import { ReactNode } from "react";
 
 import { useEffect, useState } from "react";
 
 // Hook to determine if the screen height is small (<768px)
-const useSmallLine = () => {
-  const [isSmall, setIsSmall] = useState(window.innerHeight < 768);
+export const useSmallLine = () => {
+  const [isSmall, setIsSmall] = useState(false); // ✅ Default false to avoid SSR mismatch
 
   useEffect(() => {
-    const handleResize = () => setIsSmall(window.innerHeight < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const checkSize = () => setIsSmall(window.innerHeight < 768);
+
+    checkSize(); // Set initial value after mount
+    window.addEventListener("resize", checkSize);
+
+    return () => window.removeEventListener("resize", checkSize);
   }, []);
 
   return isSmall;

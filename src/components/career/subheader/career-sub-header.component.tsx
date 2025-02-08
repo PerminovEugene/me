@@ -1,6 +1,8 @@
+"use client";
+
 import { routes } from "@/routing/routing";
 import React from "react";
-import { HeaderLevel } from "@/components/header/header.component";
+import { HeaderLevel } from "@/components/header/header-level.component";
 import { HeaderConfig } from "@/components/header/config";
 import { HeaderEntity } from "@/components/header/design";
 
