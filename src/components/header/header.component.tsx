@@ -88,8 +88,8 @@ const Header = () => {
           className="hidden md:block md:mt-auto self-center pb-3"
           src="/files/design/logo-removebg-preview.png"
           alt="gas-meme"
-          width={!isMd ? 150 : 75}
-          height={!isMd ? 150 : 75}
+          width={isMd ? 150 : 75}
+          height={isMd ? 150 : 75}
         />
       </header>
 

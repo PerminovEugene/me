@@ -5,11 +5,11 @@ import { H1 } from "@/components/main/h1.component";
 
 const ProjectsPage = () => {
   return (
-    <Fragment>
+    <div className="p-4 print:p-0">
       <H1 text="Explore my pet projects" />
 
       <ProjectsComponent projects={projects} />
-    </Fragment>
+    </div>
   );
 };
 

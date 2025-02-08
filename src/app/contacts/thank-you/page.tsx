@@ -20,7 +20,7 @@ const ThankYouPage = () => {
           I&apos;ll get back to you as soon as possible.
         </p>
         <Image
-          src="/files/design/cat-postman.webp"
+          src="/files/design/cat-with-mail.webp"
           alt="Thank you for contacting me"
           className="rounded-lg shadow-md mx-auto max-w-full mt-4"
           width={400}

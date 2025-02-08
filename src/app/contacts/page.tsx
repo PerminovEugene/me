@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const ContactsPage = () => {
   return (
-    <Fragment>
+    <div className="p-4 print:p-0">
       <H1 text="Contact me" />
 
       {/* UML*/}
@@ -87,7 +87,7 @@ const ContactsPage = () => {
           </p>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

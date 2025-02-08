@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="md:ml-46 flex justify-center items-center bg-gray-900 text-white p-6 print:hidden">
+    <footer className="md:ml-46 flex justify-center items-center bg-gray-900 text-white p-6 print:hidden border-t-2 border-white border-dotted">
       <p className="text-sm text-center mr-4">
         © {new Date().getFullYear()} Eugene Perminov. All rights reserved.
       </p>

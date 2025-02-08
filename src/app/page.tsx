@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className="w-full text-white">
       {/* Section 1 - About Me */}
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 text-center md:text-left">
+      <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 text-center md:text-left border-b-2 border-white border-dotted">
         <div className="lg:w-1/2 p-5 lg:pl-20 md:pl-10">
           <h1 className="text-5xl font-bold mb-6">
             Hi, I&apos;m Eugene Perminov
@@ -30,7 +30,7 @@ const HomePage = () => {
       </section>
 
       {/* Section 2 - Career Path */}
-      <section className="min-h-screen flex flex-col md:flex-row-reverse items-center justify-center px-6 text-center md:text-left bg-[#1A2332]">
+      <section className="min-h-screen flex flex-col md:flex-row-reverse items-center justify-center px-6 text-center md:text-left bg-[#1A2332] border-b-2 border-white border-dotted">
         <div className="md:w-1/2 p-5">
           <h2 className="text-4xl font-semibold mb-6">
             Explore My Career Path

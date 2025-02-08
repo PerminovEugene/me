@@ -1,5 +1,5 @@
 const H1 = ({ text }: { text: string }) => (
-  <h1 className="text-4xl font-bold mb-8">{text}</h1>
+  <h1 className="text-center text-4xl font-bold mb-8">{text}</h1>
 );
 
 export { H1 };

@@ -77,7 +77,7 @@ const TechnologyExperience = ({ technology }: { technology: Technologies }) => {
           )}
         </div>
       </div>
-      <div className="mt-4 grid grid-cols-2 gap-4flex flex-col md:flex-row gap-4">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <h2 className="text-md font-semibold mb-4">
             Commercial experience with {technology}:{" "}

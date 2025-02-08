@@ -7,7 +7,7 @@ const LanguageBlock = ({ language }: { language: Language }) => {
   const emptyCircles = totalCircles - filledCircles;
 
   return (
-    <div className=" text-black flex justify-between flex-col lg:flex-row mb-2 lg:mb-0">
+    <div className=" text-black flex justify-between flex-col lg:flex-row mb-2 lg:mb-0 print:flex-row print:mb-0">
       <div className="flex">
         <h4 className="text-md font-semibold">{language.name}:</h4>
         <span className="text-md text-gray-600 ml-2">
