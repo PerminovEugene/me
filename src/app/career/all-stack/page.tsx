@@ -1,7 +1,6 @@
 import AllStackComponent from "@/components/career/stack-list/all-stack.component";
 import { metadataBase } from "../../metadata";
 import { Metadata } from "next";
-import { Fragment } from "react";
 import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {

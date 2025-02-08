@@ -1,6 +1,6 @@
 import { metadataBase } from "../../metadata";
 import { Metadata } from "next";
-import React, { Fragment } from "react";
+import React from "react";
 import Link from "next/link";
 import solidityGasOptimizationArticleData from "./solidity-gas-optimization-1/data";
 import { H1 } from "@/components/main/h1.component";

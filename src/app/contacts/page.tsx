@@ -2,7 +2,6 @@ import ContactsForm from "@/components/contacts/contacts.form";
 import { metadataBase } from "../metadata";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Fragment } from "react";
 import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
