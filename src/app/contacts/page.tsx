@@ -2,6 +2,8 @@ import ContactsForm from "@/components/contacts/contacts.form";
 import { metadataBase } from "../metadata";
 import { Metadata } from "next";
 import Image from "next/image";
+import { Fragment } from "react";
+import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
@@ -10,51 +12,49 @@ export const metadata: Metadata = {
 
 const ContactsPage = () => {
   return (
-    <div className="p-8 w-full flex flex-col items-center gap-12">
-      <h1 className="text-3xl font-bold text-white">Contact me</h1>
+    <Fragment>
+      <H1 text="Contact me" />
 
       {/* UML*/}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-md">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-1 mt-10 lg:mt-20">
         {/* UI Block */}
-        <div className="relative flex flex-col items-center text-center border-2 border-white border-dashed rounded-lg  w-[400px] shadow-lg">
+        <div className="relative flex flex-col items-center text-center border-2 border-white border-dashed rounded-lg w-[400px] h-[400px] shadow-lg">
           <div className="absolute -top-5 bg-[#101a2d] px-4 text-white font-bold">
             Fill the contact form
           </div>
-          <div className="w-full">
+          <div className="w-full p-2 h-full">
             <ContactsForm />
           </div>
         </div>
 
         {/* Responsive Arrow */}
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="text-white font-bold mb-2 md:mb-0 md:mr-2">POST</div>
-
+        <div className="flex flex-col lg:flex-row items-center flex md-col">
           {/* Horizontal Arrow for Desktop */}
           <svg
-            className="hidden md:block"
-            width="100"
+            className="hidden lg:block"
+            width="50"
             height="30"
-            viewBox="0 0 100 30"
+            viewBox="0 0 50 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <line
               x1="5"
               y1="15"
-              x2="95"
+              x2="45"
               y2="15"
               stroke="white"
               strokeWidth="2"
             />
-            <polygon points="95,15 85,10 85,20" fill="white" />
+            <polygon points="45,15 35,10 35,20" fill="white" />
           </svg>
 
           {/* Vertical Arrow for Mobile */}
           <svg
-            className="block md:hidden"
+            className="block lg:hidden"
             width="30"
-            height="80"
-            viewBox="0 0 30 80"
+            height="60"
+            viewBox="0 0 30 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -62,16 +62,16 @@ const ContactsPage = () => {
               x1="15"
               y1="5"
               x2="15"
-              y2="75"
+              y2="55"
               stroke="white"
               strokeWidth="2"
             />
-            <polygon points="15,75 10,65 20,65" fill="white" />
+            <polygon points="15,55 10,45 20,45" fill="white" />
           </svg>
         </div>
 
         {/* Server Block */}
-        <div className="relative flex flex-col items-center text-center border-2 border-white border-dashed rounded-lg p-8 w-[400px] shadow-lg">
+        <div className="relative flex flex-col items-center text-center border-2 border-white border-dashed rounded-lg p-2 w-[400px] h-[400px] shadow-lg mt-4 lg:mt-0">
           <div className="absolute -top-5 bg-[#101a2d] px-4 text-white font-bold">
             Message Processing Unit
           </div>
@@ -87,7 +87,7 @@ const ContactsPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

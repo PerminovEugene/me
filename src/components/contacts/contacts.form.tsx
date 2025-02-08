@@ -46,10 +46,10 @@ const ContactsForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-[#1A2332] p-6 rounded-lg shadow-lg w-full max-w-md border border-gray-700"
+      className="bg-[#1A2332] p-6 rounded-lg w-full border border-gray-700"
     >
       {/* Email Input */}
-      <div className="mb-4">
+      <div className="mb-5">
         <label
           htmlFor="email"
           className="block text-sm font-medium text-gray-300"
@@ -61,13 +61,13 @@ const ContactsForm = () => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 block w-full px-4 py-2 bg-[#2A3548] text-white border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          className="mt-1 block w-full px-4 py-2 bg-[#2A3548] text-white border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           required
         />
       </div>
 
       {/* Message Input */}
-      <div className="mb-4">
+      <div className="mb-5">
         <label
           htmlFor="message"
           className="block text-sm font-medium text-gray-300"
@@ -76,10 +76,10 @@ const ContactsForm = () => {
         </label>
         <textarea
           id="message"
-          rows={4}
+          rows={6}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="mt-1 block w-full px-4 py-2 bg-[#2A3548] text-white border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          className="mt-1 block w-full px-4 py-2 bg-[#2A3548] text-white border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           required
         ></textarea>
       </div>

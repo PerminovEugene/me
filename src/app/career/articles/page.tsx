@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import React, { Fragment } from "react";
 import Link from "next/link";
 import solidityGasOptimizationArticleData from "./solidity-gas-optimization-1/data";
-// import howToCreatePetProjectsArticleData from "./how-to-create-pet-projects/data";
+import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
@@ -19,7 +19,8 @@ const articles = [
 const ArticlesPage = () => {
   return (
     <Fragment>
-      <h1 className="text-4xl font-bold mb-8">Articles</h1>
+      <H1 text="Articles" />
+
       <div className="w-full max-w-4xl space-y-6">
         {articles.map((article, index) => (
           <Link

@@ -2,6 +2,7 @@ import AllStackComponent from "@/components/career/stack-list/all-stack.componen
 import { metadataBase } from "../../metadata";
 import { Metadata } from "next";
 import { Fragment } from "react";
+import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const AllStackPage = () => {
   return (
     <Fragment>
-      <h1 className="text-4xl font-bold mb-8">All Stack</h1>
+      <H1 text="All Stack" />
       <div className="w-full max-w-4xl space-y-6">
         <AllStackComponent />
       </div>

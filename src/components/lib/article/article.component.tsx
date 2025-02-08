@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { ArticleData } from "./article.types";
+import { H1 } from "@/components/main/h1.component";
 
 interface ArticleProps {
   data: ArticleData;
@@ -9,9 +10,10 @@ interface ArticleProps {
 const Article = ({ data, children }: ArticleProps) => {
   return (
     <article className="w-full max-w-4xl px-4">
-      <h1 className="text-2xl font-bold text-white mb-4 text-center">
+      {/* <h1 className="text-2xl font-bold text-white mb-4 text-center">
         {data.title}
-      </h1>
+      </h1> */}
+      <H1 text={data.title} />
       {children}
     </article>
   );

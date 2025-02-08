@@ -47,9 +47,8 @@ export const careerSubHeaderConfig: HeaderConfig = [
 
 const CareerSubHeader = () => {
   return (
-    <div className="flex justify-between mt-2">
+    <div className="flex justify-between">
       <div className="flex-1 flex flex-col items-start">
-        {/* <SubHeader config={routes.career.next} /> */}
         <HeaderLevel
           headerConfig={careerSubHeaderConfig}
           text="Career"

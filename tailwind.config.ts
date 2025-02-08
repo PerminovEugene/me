@@ -29,6 +29,7 @@ export default {
       },
       spacing: {
         "46": "11.5rem", // 46 * 0.25rem = 11.5rem
+        "46plus1": "calc(11.5rem + 1px)",
       },
     },
   },
