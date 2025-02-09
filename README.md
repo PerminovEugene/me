@@ -25,13 +25,13 @@ This website serves as a digital portfolio and blog to showcase my professional 
 - **Career**:
   - CV: My detailed résumé. 🚧 **Work in Progress**
   - All-Stack: Technologies I’ve used, their time of use, and how I’ve applied them.
-  - Books/Articles/Courses: A log of things I’ve been learning or reading.
-  - Pet Projects: Showcase of my personal and professional side projects.
-  - Articles: Blog posts on programming, tech, and more.
-- **Hobbies**:
+  - Articles: A log of things I’ve been learning or reading.
+      <!-- - Pet Projects: Showcase of my personal and professional side projects. -->
+      <!-- - Articles: Blog posts on programming, tech, and more. -->
+    <!-- - **Hobbies**:
   - Music: Stories, playlists, and photos related to my musical journey.
   - Traveling: Blog posts and photos from my travels.
-  - Healthy Lifestyle: Insights and stories about fitness and health.
+  - Healthy Lifestyle: Insights and stories about fitness and health. -->
 - **Contacts**: Ways to get in touch with me.
 
 ## 🛠️ Tech Stack
@@ -54,7 +54,7 @@ When CV page is updated:
 3. Check that everything is ok in PDF file
 4. Put new PDF to `/public/files/Eugene_Perminov_CV.pdf`
 
-P.S. I know it would be nice to use S3, but this solution is fine for now.
+P.S. I know it would be nice to use AWS and S3 especially, but this solution is fine for now.
 
 ## 🚀 Future Plans
 

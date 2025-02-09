@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const ContactsPage = () => {
   return (
-    <div className="p-4 print:p-0">
+    <div className="p-4 mb-20 print:p-0">
       <H1 text="Contact me" />
 
       {/* UML*/}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const AllStackPage = () => {
   return (
-    <div className="p-4 print:p-0">
+    <div className="p-4 mb-16 print:p-0">
       <H1 text="All Stack" />
       <div className="w-full max-w-4xl space-y-6">
         <AllStackComponent />
