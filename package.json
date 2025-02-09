@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
+    "@vercel/speed-insights": "^1.1.0",
     "classnames": "^2.5.1",
     "next": "^15.1.6",
     "react": "^19.0.0",

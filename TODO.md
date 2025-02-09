@@ -7,6 +7,6 @@
 - [done] Add main page design details
 - [done] Move download button only to CV page
 - [done] Add responsive design or lock width
+- [done] Add GA
 - [ ] Add SEO
-- [ ] Add GA
 - [ ] Check twitter links
