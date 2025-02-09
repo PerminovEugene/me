@@ -59,7 +59,7 @@ const Header = () => {
       />
       <header
         className={classNames(
-          "fixed flex flex-col items-start left-0 p-3 h-full z-50",
+          "fixed flex flex-col items-start left-0 p-3 h-full z-40",
           "print:hidden border-r-2 border-dotted border-white bg-gray-800",
           "transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0",
           {
@@ -94,7 +94,7 @@ const Header = () => {
       </header>
 
       <button
-        className="md:hidden fixed top-4 left-3 flex items-center bg-gray-800 text-white p-3 rounded border-2 border-dotted border-white z-50"
+        className="md:hidden fixed top-4 left-3 flex items-center bg-gray-800 text-white p-3 rounded border-2 border-dotted border-white z-40"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         Menu
