@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: Thanks for contacting me!",
+  title: "Evgenii Perminov: Thanks for contacting me!",
 };
 
 const ThankYouPage = () => {

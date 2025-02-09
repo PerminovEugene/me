@@ -7,7 +7,7 @@ import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: Articles",
+  title: "Evgenii Perminov: Articles",
 };
 
 // Fine for now

@@ -346,7 +346,7 @@ const allExperience: AllExperience = [
   {
     company:
       "NFT marketplace based on Ethereum, Solidity, ERC721, Hardhat, Pinata and ethers.js. Custom server for Ethereum node indexing.",
-    link: "https://github.com/PerminovEugene/nft-open-marketplace",
+    link: "https://github.com/PerminovEvgenii/nft-open-marketplace",
     status: ProductStatus.InProgress,
     title: "NFT Open Marketplace",
     location: "Remote",

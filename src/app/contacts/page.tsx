@@ -6,7 +6,7 @@ import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: Contact me",
+  title: "Evgenii Perminov: Contact me",
 };
 
 const ContactsPage = () => {

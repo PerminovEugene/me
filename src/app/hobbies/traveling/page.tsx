@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: Painting",
+  title: "Evgenii Perminov: Painting",
 };
 
 const TravelingPage = () => {

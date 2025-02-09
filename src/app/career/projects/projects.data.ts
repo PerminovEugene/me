@@ -17,7 +17,7 @@ export const projects = [
     name: "NFT Open Marketplace",
     description:
       "Simple NFT Marketplace based on Solidity, Hardhat and custom indexer on Nest.js, Postgres.",
-    githubLink: "https://github.com/PerminovEugene/nft-open-marketplace",
+    githubLink: "https://github.com/PerminovEvgenii/nft-open-marketplace",
     projectLink: "not available",
     status: "In Progress",
     images: [

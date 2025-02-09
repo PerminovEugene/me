@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: Resources",
+  title: "Evgenii Perminov: Resources",
 };
 
 const ResourcesPage = () => {

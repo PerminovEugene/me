@@ -14,7 +14,7 @@ const CVSubHeader = () => {
       </div>
       <div className="bg-blue-500 hover:bg-blue-700 text-center p-2 text-white font-bold rounded mt-2">
         <a
-          href="/files/Eugene_Perminov_CV.pdf"
+          href="/files/Evgenii_Perminov_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >

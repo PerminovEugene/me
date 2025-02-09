@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <footer className="md:ml-46 flex justify-center items-center bg-gray-900 text-white p-6 print:hidden border-t-2 border-white border-dotted">
       <p className="text-sm text-center mr-4">
-        © {new Date().getFullYear()} Eugene Perminov. All rights reserved.
+        © {new Date().getFullYear()} Evgenii Perminov. All rights reserved.
       </p>
       <a
-        href="https://www.linkedin.com/in/eugene-perminov/"
+        href="https://www.linkedin.com/in/Evgenii-perminov/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-500 hover:text-blue-700 transition duration-300 mx-2"
@@ -17,7 +17,7 @@ const Footer = () => {
         <FaLinkedinIn size={24} />
       </a>
       <a
-        href="https://github.com/PerminovEugene"
+        href="https://github.com/PerminovEvgenii"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-500 hover:text-gray-700 transition duration-300 mx-2"

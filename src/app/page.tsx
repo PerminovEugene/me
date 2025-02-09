@@ -10,7 +10,7 @@ const HomePage = () => {
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 text-center md:text-left border-b-2 border-white border-dotted">
         <div className="lg:w-1/2 p-5 lg:pl-20 md:pl-10">
           <h1 className="text-5xl font-bold mb-6">
-            Hi, I&apos;m Eugene Perminov
+            Hi, I&apos;m Evgenii Perminov
           </h1>
           <p className="text-lg text-gray-300 max-w-lg mb-10">
             Software engineer and tech enthusiast with a passion for building
@@ -21,7 +21,7 @@ const HomePage = () => {
         <div className="lg:w-1/2 flex justify-center">
           <Image
             src="/files/design/me.jpg"
-            alt="Eugene Perminov"
+            alt="Evgenii Perminov"
             width={400}
             height={400}
             className="rounded-lg shadow-lg"

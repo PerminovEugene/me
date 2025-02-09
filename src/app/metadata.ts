@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadataBase: Metadata = {
-  title: "Eugene Perminov personal website.",
+  title: "Evgenii Perminov personal website.",
   description:
     "Software engineer and tech enthusiast. Want to discuss something or have an offer? Visit the contacts page and write me a message.",
   keywords: [
-    "Eugene Perminov",
+    "Evgenii Perminov",
     "Software Engineer",
     "Web Development",
     "Blockchain development",
@@ -18,11 +18,11 @@ export const metadataBase: Metadata = {
     "Full Stack",
   ],
   openGraph: {
-    title: "Eugene Perminov Personal Website",
+    title: "Evgenii Perminov Personal Website",
     description:
       "Want to discuss something or have an offer? Visit the contacts page and write me a message.",
     // url: "https://yourwebsite.com", // Replace with your actual URL
-    siteName: "Eugene Perminov",
+    siteName: "Evgenii Perminov",
     // images: [ // TODO add when image will be available
     //   {
     //     url: "/path-to-image.jpg", // Add a path to a relevant image

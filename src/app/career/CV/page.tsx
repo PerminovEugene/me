@@ -11,7 +11,7 @@ import Content from "@/components/career/cv/content-block/content-block.componen
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: CV",
+  title: "Evgenii Perminov: CV",
 };
 
 const CVPage = () => {

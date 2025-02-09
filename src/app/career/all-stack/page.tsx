@@ -5,7 +5,7 @@ import { H1 } from "@/components/main/h1.component";
 
 export const metadata: Metadata = {
   ...metadataBase,
-  title: "Eugene Perminov: All stack page",
+  title: "Evgenii Perminov: All stack page",
 };
 
 const AllStackPage = () => {
