@@ -32,8 +32,10 @@ const CookieConsentBanner = () => {
 
   return (
     <div className="z-50 fixed inset-0  flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-gray-800 absolute bottom-20 text-white p-4 rounded-lg shadow-lg flex items-center space-x-4">
-        <p>We use cookies to improve your experience. Do you accept?</p>
+      <div className="bg-gray-800 absolute bottom-20 text-white p-4 rounded-lg shadow-lg flex items-center space-x-4 flex flex-col md:flex-row">
+        <p className="mb-4 md:mb-0">
+          We use cookies to improve your experience. Do you accept?
+        </p>
         <div>
           <button
             onClick={handleAccept}
