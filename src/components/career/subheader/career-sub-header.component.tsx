@@ -25,7 +25,7 @@ const CVSubHeader = () => {
   );
 };
 
-const { cv, allStack, articles } = routes.career.next;
+const { cv, allStack } = routes.career.next;
 export const careerSubHeaderConfig: HeaderConfig = [
   {
     link: cv.link,
@@ -37,12 +37,6 @@ export const careerSubHeaderConfig: HeaderConfig = [
     link: allStack.link,
     text: allStack.text,
     path: "all-stack",
-    subHeaderComponent: null,
-  },
-  {
-    link: articles.link,
-    text: articles.text,
-    path: "articles",
     subHeaderComponent: null,
   },
 ];

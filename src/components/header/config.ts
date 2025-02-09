@@ -30,6 +30,12 @@ export const headerConfig: HeaderConfig = [
     text: "Career",
     subHeaderComponent: CareerSubHeader,
   },
+  {
+    path: "articles",
+    link: routes.articles.link,
+    text: "Articles",
+    subHeaderComponent: null,
+  },
   // {
   //   path: "hobbies",
   //   link: routes.hobbies.next.music.link,

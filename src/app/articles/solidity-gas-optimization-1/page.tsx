@@ -28,12 +28,12 @@ const HowToCreatePetProjectPage = () => {
       <Hr />
       <Section>
         <p>
-          The first thing I noticed is a wide usage of the{" "}
+          The first thing I noticed is a widespread use of the{" "}
           <strong>unchecked</strong> keyword. This keyword tells the Solidity
           compiler to turn off arithmetic operations safety checks, which were
           added as default in version 0.8.0.
         </p>
-        <p>In the next code example demonstrates the difference in usage:</p>
+        <p>The following code example demonstrates the difference in usage:</p>
         <Code>
           {`function sumChecked(uint256[] memory numbers) public pure returns (uint256) {
   uint256 total = 0;
@@ -55,14 +55,15 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
         </Code>
         <p>
           <Italic>sumUnchecked</Italic> function is more gas-efficient, but in
-          this example it&apos;s possible an overflow error can occur if{" "}
+          this example it&apos;s possible that an overflow error may occur if{" "}
           <Italic>numbers[i] + numbers[j] {`>`} 2^256.</Italic>
         </p>
         <p>
           This means that when you are working with any arithmetic operations in
-          Solidity, you need to determine whether it is possible to get overflow
-          or underflow errors in a particular piece of code, and if the answer
-          is no, then you need to add the keyword <strong>unchecked</strong>.
+          Solidity, you need to determine whether it is possible to encounter
+          overflow or underflow errors in a particular piece of code, and if the
+          answer is no, then you need to add the keyword{" "}
+          <strong>unchecked</strong>.
         </p>
         <p>
           Check out the{" "}
@@ -75,8 +76,8 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
       <Hr />
       <Section>
         <p>
-          The second thing that I noticed is frequent use of assembly and manual
-          memory management. Let&apos;s take a look at the example:
+          The second thing that I noticed is the frequent use of assembly and
+          manual memory management. Let&apos;s take a look at the example:
         </p>
         <Code>
           {`function defaultKeccak(bytes32 first, bytes32 second) public pure returns (bytes32 value) {
@@ -87,18 +88,18 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
           <Link href="https://docs.Soliditylang.org/en/latest/units-and-global-variables.html">
             <Italic>Keccak256</Italic>
           </Link>{" "}
-          is default hashing function in Solidity. In our example it expects
+          is Solidity’s default hashing function. In our example, it expects
           concatenated bytes as input.
           <br />
           <Link href="https://docs.Soliditylang.org/en/v0.8.11/abi-spec.html#non-standard-packed-mode">
             <Italic>abi.encodePacked(first, second)</Italic>{" "}
           </Link>
           is a high-level utility that concatenates the two bytes32 values into
-          a single memory block. Inside of <Italic>encodePacked</Italic>{" "}
-          Solidity creates a temporary memory buffer to store the concatenated
-          values. The memory allocation, data copying, and concatenation
-          introduce overhead. To avoid that overhead and save gas we can manage
-          memory manually.
+          a single memory block. Inside <Italic>encodePacked</Italic> Solidity
+          creates a temporary memory buffer to store the concatenated values.
+          The memory allocation, data copying, and concatenation introduce
+          overhead. To avoid that overhead and save gas, we can manage memory
+          manually.
         </p>
         <Code>
           {`function assembledKeccak(bytes32 first, bytes32 second) public pure returns (bytes32 value) {
@@ -112,18 +113,20 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
         <p>
           <Italic>
             First, I&apos;ll remind the reader that 32 is 0x20 in hexadecimal
-            representation, so bytes32 variable takes exactly 0x20 bytes in the
+            representation, so bytes32 variable takes exactly 0x20 bytes in
             memory.{" "}
           </Italic>
-          What Happens: The mstore instructions directly store first and second
-          into specific memory slots (0x00 and 0x20). There is no high-level
-          memory management or copying. The memory layout is explicitly
-          controlled with mstore, so the data is immediately ready for hashing.
+          What happens here: The mstore instructions directly store first and
+          second into specific memory slots (0x00 and 0x20). There is no
+          high-level memory management or copying. The memory layout is
+          explicitly controlled with mstore, so the data is immediately ready
+          for hashing.
         </p>
         <p>
-          More information about assembly in Solidity information is{" "}
+          More information about assembly in Solidity can be found in the
+          official doc{" "}
           <Link href="https://gydocument.readthedocs.io/en/latest/assembly.html">
-            here
+            official documentation
           </Link>
           .
         </p>
@@ -134,11 +137,11 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
           Thank you for reading. I hope you enjoyed this article and learned
           something new!
           <br />
-          If you have any comments or questions don&apos;t hesitate to reach me
-          out.
+          If you have any comments or questions, don&apos;t hesitate to reach
+          out to me.
           <br />
           <Link href="https://github.com/PerminovEugene/soldity-gas-tricks">
-            All code examples and tests can be found here
+            All code examples and tests can be found here.
           </Link>
         </p>
       </Section>

@@ -39,19 +39,19 @@ export const routes = {
       //   link: "/career/resources",
       //   text: "Resources",
       // },
-      articles: {
-        link: "/career/articles",
-        text: "Articles",
-        next: {
-          solidityGasOptimizationArticleData: {
-            link: "/career/articles/solidity-gas-optimization-1",
-            text: "Solidity Gas Optimization: Part 1",
-          },
-          howToCreatePetProjects: {
-            link: "/career/articles/how-to-create-pet-projects",
-            text: "How to create pet projects and not give up",
-          },
-        },
+    },
+  },
+  articles: {
+    link: "/articles",
+    text: "Articles",
+    next: {
+      solidityGasOptimizationArticleData: {
+        link: "/articles/solidity-gas-optimization-1",
+        text: "Solidity Gas Optimization: Part 1",
+      },
+      howToCreatePetProjects: {
+        link: "/articles/how-to-create-pet-projects",
+        text: "How to create pet projects and not give up",
       },
       // projects: {
       //   link: "/career/projects",
