@@ -137,7 +137,7 @@ function sumUnchecked(uint256[] memory numbers) public pure returns (uint256) {
           If you have any comments or questions don&apos;t hesitate to reach me
           out.
           <br />
-          <Link href="https://github.com/PerminovEvgenii/soldity-gas-tricks">
+          <Link href="https://github.com/PerminovEugene/soldity-gas-tricks">
             All code examples and tests can be found here
           </Link>
         </p>

@@ -9,7 +9,7 @@ const Footer = () => {
         © {new Date().getFullYear()} Evgenii Perminov. All rights reserved.
       </p>
       <a
-        href="https://www.linkedin.com/in/Evgenii-perminov/"
+        href="https://www.linkedin.com/in/Eugene-Perminov/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-500 hover:text-blue-700 transition duration-300 mx-2"
@@ -17,7 +17,7 @@ const Footer = () => {
         <FaLinkedinIn size={24} />
       </a>
       <a
-        href="https://github.com/PerminovEvgenii"
+        href="https://github.com/PerminovEugene"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-500 hover:text-gray-700 transition duration-300 mx-2"
