@@ -1,21 +1,22 @@
 import { Skills } from "./skills.types";
 import { Technologies } from "../experience/technologies";
 
+// Will appear in skill box in CV
 export const skills: Skills = [
   [
     {
       technologies: [
         Technologies.TypeScript,
         Technologies.JavaScript,
+        Technologies.Rust,
         Technologies.Ruby,
         Technologies.Go,
-        Technologies.HTML5,
+        // Technologies.HTML5,
         Technologies.SQL,
         Technologies.Solidity,
       ],
       title: "Programming Languages",
     },
-
     {
       technologies: [
         Technologies.NodeJs,
@@ -23,10 +24,11 @@ export const skills: Skills = [
         Technologies.NestJs,
         Technologies.Microservices,
         Technologies.RubyOnRails,
-        Technologies.Go,
-        Technologies.Gin,
+        // Technologies.Gin,
+        // Technologies.Typeorm,
         Technologies.GRPC,
         Technologies.REST,
+        Technologies.Mongoose,
       ],
       title: "Back-end",
     },
@@ -37,13 +39,38 @@ export const skills: Skills = [
         Technologies.Webpack,
         Technologies.CSS3,
         Technologies.NextJs,
+        Technologies.HTML5,
         Technologies.MetaMaskSDK,
         Technologies.EthersJs,
-        Technologies.GraphQL,
-        Technologies.ApolloClient,
+        // Technologies.GraphQL,
+        // Technologies.ApolloClient,
       ],
       title: "Front-end",
     },
+    {
+      technologies: [
+        Technologies.PostgreSQL,
+        Technologies.MongoDB,
+        Technologies.Redis,
+        Technologies.Kafka,
+        Technologies.RabbitMQ,
+        // Technologies.Elasticsearch,
+      ],
+      title: "Databases",
+    },
+    {
+      technologies: [
+        Technologies.SOLID,
+        Technologies.TDD,
+        Technologies.YAGNI,
+        Technologies.KISS,
+        Technologies.DRY,
+        Technologies.DesignPatterns,
+      ],
+      title: "Principles",
+    },
+  ],
+  [
     {
       technologies: [
         Technologies.Scrum,
@@ -55,24 +82,12 @@ export const skills: Skills = [
       ],
       title: "Soft",
     },
-  ],
-  [
-    {
-      technologies: [
-        Technologies.PostgreSQL,
-        Technologies.MongoDB,
-        Technologies.Redis,
-        Technologies.Kafka,
-        Technologies.Elasticsearch,
-      ],
-      title: "Databases",
-    },
     {
       technologies: [
         Technologies.Jest,
         Technologies.Mocha,
         Technologies.Chai,
-        Technologies.Cypress,
+        // Technologies.Cypress,
       ],
       title: "Testing",
     },
@@ -84,7 +99,6 @@ export const skills: Skills = [
         Technologies.Debezium,
         Technologies.Kubernetes,
         Technologies.GithubActions,
-        Technologies.RabbitMQ,
         Technologies.Aptible,
         Technologies.Heroku,
         Technologies.Okteto,

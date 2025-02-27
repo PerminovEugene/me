@@ -16,6 +16,7 @@ export type Experience = {
   months: number;
   type: ExperienceType;
   status: ProductStatus;
+  visibleOnCv?: boolean;
 };
 
 export enum ExperienceType {

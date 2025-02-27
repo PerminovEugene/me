@@ -156,6 +156,14 @@ const techTypeColors = {
     unchecked: "bg-cyan-200 hover:bg-cyan-400 ring-cyan-500",
     checked: "bg-cyan-400 hover:bg-cyan-300 ring-cyan-500",
   },
+  [TechType.Principles]: {
+    unchecked: "bg-green-200 hover:bg-green-400 ring-green-500",
+    checked: "bg-green-400 hover:bg-green-300 ring-green-500",
+  },
+  [TechType.AI]: {
+    unchecked: "bg-purple-200 hover:bg-purple-400 ring-purple-500",
+    checked: "bg-purple-400 hover:bg-purple-300 ring-purple-500",
+  },
 };
 
 const AllStackComponent = () => {

@@ -2,8 +2,6 @@
 
 Welcome to my personal website repository! This project showcases my professional journey, personal interests, and ongoing projects in one cohesive space.
 
-## WORK IN PROGRESS!
-
 ## 📋 Table of Contents
 
 - [Overview](#overview)
@@ -47,7 +45,7 @@ Default Next.js structure. App folder contains pages. Pages use components from 
 
 Visit `https://www.evgeniiperminov.dev` and explore.
 
-When CV page is updated:
+## 💡 When CV page is updated:
 
 1. `/career/CV` page
 2. Print as PDF

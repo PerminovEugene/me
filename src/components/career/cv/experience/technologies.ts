@@ -8,6 +8,7 @@ export enum Technologies {
   HTML5 = "HTML5",
   SQL = "SQL",
   GraphQL = "GraphQL",
+  Rust = "Rust",
 
   // Front-end
   React = "React",
@@ -38,22 +39,28 @@ export enum Technologies {
   Gin = "Gin",
   SocketIO = "Socket.io",
   Microservices = "Microservices",
+  DesignPatterns = "Design Patterns",
+
+  // ORM
+  Mongoose = "Mongoose",
+  Prizma = "Prizma",
+  Typeorm = "Typeorm",
+  Sequelize = "Sequelize",
 
   // Databases
   PostgreSQL = "PostgreSQL",
   MongoDB = "MongoDB",
   Redis = "Redis",
-  Elasticsearch = "Elasticsearch",
-  Mongoose = "Mongoose",
+  // Elasticsearch = "Elasticsearch",
   Kafka = "Kafka",
   RabbitMQ = "RabbitMQ",
 
   // Testing
   Jest = "Jest",
-  Enzyme = "Enzyme",
   Mocha = "Mocha",
   Chai = "Chai",
   Supertest = "Supertest",
+  Enzyme = "Enzyme",
   Cypress = "Cypress",
   Protractor = "Protractor",
 
@@ -87,11 +94,21 @@ export enum Technologies {
   CriticalThinking = "Critical Thinking",
   TimeManagement = "Time Management",
 
+  // Principles
+  SOLID = "SOLID",
+  DRY = "DRY",
+  KISS = "KISS",
+  TDD = "TDD",
+  YAGNI = "YAGNI",
+
   // Protocols
   Websockets = "Websockets",
   FHIR = "FHIR",
   GRPC = "gRPC",
   REST = "REST",
+
+  // AI
+  Ollama = "Ollama",
 }
 
 export enum TechType {
@@ -105,6 +122,8 @@ export enum TechType {
   ThirdPartyIntegrations = "3rd-Party Integrations",
   SoftSkills = "Soft Skills",
   Protocols = "Protocols",
+  Principles = "Principle",
+  AI = "AI",
 }
 
 export const technologyToType: { [key in Technologies]: TechType } = {
@@ -117,6 +136,7 @@ export const technologyToType: { [key in Technologies]: TechType } = {
   [Technologies.HTML5]: TechType.ProgrammingLanguages,
   [Technologies.SQL]: TechType.ProgrammingLanguages,
   [Technologies.GraphQL]: TechType.ProgrammingLanguages,
+  [Technologies.Rust]: TechType.ProgrammingLanguages,
 
   // Front-end
   [Technologies.React]: TechType.FrontEnd,
@@ -147,13 +167,17 @@ export const technologyToType: { [key in Technologies]: TechType } = {
   [Technologies.Gin]: TechType.BackEnd,
   [Technologies.SocketIO]: TechType.BackEnd,
   [Technologies.Microservices]: TechType.BackEnd,
+  [Technologies.Sequelize]: TechType.BackEnd,
+  [Technologies.Typeorm]: TechType.BackEnd,
+  [Technologies.Prizma]: TechType.BackEnd,
+  [Technologies.DesignPatterns]: TechType.BackEnd,
+  [Technologies.Mongoose]: TechType.BackEnd,
 
   // Databases
   [Technologies.PostgreSQL]: TechType.Databases,
   [Technologies.MongoDB]: TechType.Databases,
   [Technologies.Redis]: TechType.Databases,
-  [Technologies.Elasticsearch]: TechType.Databases,
-  [Technologies.Mongoose]: TechType.Databases,
+  // [Technologies.Elasticsearch]: TechType.Databases,
   [Technologies.Kafka]: TechType.Databases,
   [Technologies.RabbitMQ]: TechType.Databases,
 
@@ -196,8 +220,19 @@ export const technologyToType: { [key in Technologies]: TechType } = {
   [Technologies.CriticalThinking]: TechType.SoftSkills,
   [Technologies.TimeManagement]: TechType.SoftSkills,
 
+  // Protocols
   [Technologies.Websockets]: TechType.Protocols,
   [Technologies.FHIR]: TechType.Protocols,
   [Technologies.GRPC]: TechType.Protocols,
   [Technologies.REST]: TechType.Protocols,
+
+  // Principles
+  [Technologies.SOLID]: TechType.Principles,
+  [Technologies.DRY]: TechType.Principles,
+  [Technologies.KISS]: TechType.Principles,
+  [Technologies.TDD]: TechType.Principles,
+  [Technologies.YAGNI]: TechType.Principles,
+
+  // AI
+  [Technologies.Ollama]: TechType.AI,
 };

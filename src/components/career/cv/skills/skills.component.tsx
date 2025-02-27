@@ -19,7 +19,7 @@ const SkillDirrection = ({ skill }: { skill: Skill }) => {
 
 const SkillsBlock = ({ page }: { page: number }) => {
   return (
-    <div className="">
+    <div>
       {skills[page].map((skill: Skill) => (
         <SkillDirrection key={skill.title} skill={skill} />
       ))}

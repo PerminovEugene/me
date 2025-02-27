@@ -8,7 +8,7 @@ const SummaryComponent = () => {
       high load systems consisting of over <b>100 microservices</b>,
       communicating efficiently through <b>Kafka</b>.
       <br />
-      Enthusiastic about Web3 technologies, including <b>Ethereum</b> and{" "}
+      Enthusiastic about Web3 technologies, including <b>Ethereum</b>,{" "}
       <b>Solidity</b>.
     </p>
   );

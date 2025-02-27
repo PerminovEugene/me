@@ -27,6 +27,15 @@ const calculateMonths = (startDate: string, endDate: string): number => {
   );
 };
 
+const principles = [
+  { technology: Technologies.SOLID },
+  { technology: Technologies.TDD },
+  { technology: Technologies.YAGNI },
+  { technology: Technologies.KISS },
+  { technology: Technologies.DRY },
+  { technology: Technologies.DesignPatterns },
+];
+
 const allExperience: AllExperience = [
   {
     title: "Senior Software Engineer",
@@ -77,7 +86,7 @@ const allExperience: AllExperience = [
       { technology: Technologies.CSS3 },
       { technology: Technologies.StyledComponents },
       { technology: Technologies.MaterialUI },
-      { technology: Technologies.Elasticsearch },
+      // { technology: Technologies.Elasticsearch },
       { technology: Technologies.REST },
       { technology: Technologies.Redis },
       { technology: Technologies.Okteto },
@@ -89,6 +98,7 @@ const allExperience: AllExperience = [
       { technology: Technologies.GithubActions },
       { technology: Technologies.ShopifyAPI },
       { technology: Technologies.Heroku },
+      ...principles,
     ],
     type: ExperienceType.Commercial,
     status: ProductStatus.InProduction,
@@ -115,7 +125,6 @@ const allExperience: AllExperience = [
       { technology: Technologies.JavaScript },
       { technology: Technologies.HTML5 },
       { technology: Technologies.CSS3 },
-      { technology: Technologies.RabbitMQ },
       { technology: Technologies.Mocha },
       { technology: Technologies.Chai },
       { technology: Technologies.Supertest },
@@ -126,6 +135,7 @@ const allExperience: AllExperience = [
       { technology: Technologies.CriticalThinking },
       { technology: Technologies.TimeManagement },
       { technology: Technologies.VSCodeAPI },
+      ...principles,
     ],
     months: calculateMonths("August 2020", "June 2021"),
     link: "https://career.huawei.ru/rri/en/",
@@ -190,6 +200,10 @@ const allExperience: AllExperience = [
       { technology: Technologies.TimeManagement },
       { technology: Technologies.Websockets },
       { technology: Technologies.SocketIO },
+      { technology: Technologies.RabbitMQ },
+      { technology: Technologies.Typeorm },
+      { technology: Technologies.Prizma },
+      ...principles,
     ],
     type: ExperienceType.Commercial,
     status: ProductStatus.InProduction,
@@ -235,6 +249,8 @@ const allExperience: AllExperience = [
       { technology: Technologies.Agile },
       { technology: Technologies.TimeManagement },
       { technology: Technologies.Websockets },
+      { technology: Technologies.SocketIO },
+      ...principles,
     ],
     type: ExperienceType.Commercial,
     status: ProductStatus.InProduction,
@@ -268,6 +284,8 @@ const allExperience: AllExperience = [
       { technology: Technologies.TimeManagement },
       { technology: Technologies.FHIR },
       { technology: Technologies.MongoDB },
+      { technology: Technologies.Mongoose },
+      { technology: Technologies.Sequelize },
     ],
     type: ExperienceType.Commercial,
     status: ProductStatus.InProduction,
@@ -306,6 +324,25 @@ const allExperience: AllExperience = [
   // PETS
   {
     company:
+      "AI-powered file organization CLI that helps you tidy up messy folders effortlessly.",
+    link: "https://github.com/PerminovEugene/messy-folder-reorganizer-ai",
+    status: ProductStatus.InProduction,
+    title: "messy-folder-reorganizer-ai",
+    location: "Remote",
+    startDate: "January 2024",
+    endDate: "February 2025",
+    responsibilities: [],
+    months: 1,
+    stack: [
+      { technology: Technologies.Rust },
+      { technology: Technologies.Ollama },
+      { technology: Technologies.REST },
+    ],
+    type: ExperienceType.PetProject,
+    visibleOnCv: true,
+  },
+  {
+    company:
       "Chess platform focusing on custom rules and unique game modes. Using Websockets, Nest.js, MongoDB and Docker.",
     link: "https://github.com/Real-One-Chess-King/monorepo",
     status: ProductStatus.InProgress,
@@ -342,6 +379,7 @@ const allExperience: AllExperience = [
       { technology: Technologies.NextJs },
     ],
     type: ExperienceType.PetProject,
+    visibleOnCv: false,
   },
   {
     company:
@@ -385,6 +423,7 @@ const allExperience: AllExperience = [
       { technology: Technologies.SQL },
     ],
     type: ExperienceType.PetProject,
+    visibleOnCv: true,
   },
 ];
 

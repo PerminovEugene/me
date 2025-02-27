@@ -29,7 +29,7 @@ const PetProjectsBlock = () => {
   return (
     <div>
       {allExperience
-        .filter((e) => e.type === ExperienceType.PetProject)
+        .filter((e) => e.type === ExperienceType.PetProject && e.visibleOnCv)
         .map((experience: Experience) => (
           <PetProjectBlock key={experience.company} experience={experience} />
         ))}
