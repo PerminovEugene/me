@@ -31,11 +31,12 @@ const CookieConsentBanner = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="z-50 fixed bottom-5 right-5 bg-gray-800 text-white p-4 rounded-lg shadow-lg flex items-center space-x-4 flex-col md:flex-row">
-      <p className="mb-4 md:mb-0">
-        We use cookies to improve your experience. Do you accept?
+    <div className="z-50 fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white p-4 rounded-lg shadow-lg flex items-center space-x-2 flex-col lg:flex-row">
+      <p className="mb-2">
+        I use cookies to track the number of visitors and enhance your
+        experience. Do you accept?
       </p>
-      <div>
+      <div className="flex">
         <button
           onClick={handleAccept}
           className="mr-2 p-2 bg-green-500 rounded"
