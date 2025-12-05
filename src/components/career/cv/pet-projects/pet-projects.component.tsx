@@ -6,7 +6,7 @@ const PetProjectBlock = ({ experience }: { experience: Experience }) => {
     <div className="mb-4 text-black last:mb-0">
       <h4 className="text-md font-semibold">
         <a
-          href={experience.link}
+          href={experience.link as string}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
@@ -31,7 +31,10 @@ const PetProjectsBlock = () => {
       {allExperience
         .filter((e) => e.type === ExperienceType.PetProject && e.visibleOnCv)
         .map((experience: Experience) => (
-          <PetProjectBlock key={experience.company} experience={experience} />
+          <PetProjectBlock
+            key={experience.company as string}
+            experience={experience}
+          />
         ))}
     </div>
   );

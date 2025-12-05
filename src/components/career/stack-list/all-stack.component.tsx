@@ -15,10 +15,14 @@ import {
 import classNames from "classnames";
 
 const PlaceWhereItWasUsed = ({ experience }: { experience: Experience }) => {
+  const company = Array.isArray(experience.company)
+    ? experience.company.join(", ")
+    : experience.company;
+
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-lg mb-2">
       <h3 className="text-md font-semibold mb-2">{experience.title}</h3>
-      <p className="text-sm text-gray-400 mb-2">{experience.company}</p>
+      <p className="text-sm text-gray-400 mb-2">{company}</p>
       <p className="text-sm text-gray-400 mb-2">
         {experience.startDate} - {experience.endDate}
       </p>
@@ -26,13 +30,36 @@ const PlaceWhereItWasUsed = ({ experience }: { experience: Experience }) => {
   );
 };
 
+const getAllExperiencesWithTechnology = (
+  experiences: Experience[],
+  technology: Technologies
+): Experience[] => {
+  const result: Experience[] = [];
+
+  const traverse = (list: Experience[]) => {
+    list.forEach((experience) => {
+      const hasTechnology = experience.stack?.some(
+        (t: UsedTechnology) => t.technology === technology
+      );
+
+      if (hasTechnology) {
+        result.push(experience);
+      }
+
+      if (experience.items && experience.items.length > 0) {
+        traverse(experience.items);
+      }
+    });
+  };
+
+  traverse(experiences);
+
+  return result;
+};
+
 const TechnologyExperience = ({ technology }: { technology: Technologies }) => {
   const filteredExperience = technology
-    ? allExperience.filter((experience) =>
-        experience.stack.some(
-          (t: UsedTechnology) => t.technology === technology
-        )
-      )
+    ? getAllExperiencesWithTechnology(allExperience, technology)
     : [];
 
   const calculateExperience = (type: string) => {
@@ -86,12 +113,18 @@ const TechnologyExperience = ({ technology }: { technology: Technologies }) => {
           <div className="mt-2">
             {filteredExperience
               .filter((e) => e.type === ExperienceType.Commercial)
-              .map((experience) => (
-                <PlaceWhereItWasUsed
-                  key={experience.company}
-                  experience={experience}
-                />
-              ))}
+              .map((experience) => {
+                const companyKey = Array.isArray(experience.company)
+                  ? experience.company.join("-")
+                  : experience.company;
+
+                return (
+                  <PlaceWhereItWasUsed
+                    key={`${experience.title}-${companyKey}-${experience.startDate}-${experience.endDate}`}
+                    experience={experience}
+                  />
+                );
+              })}
           </div>
         </div>
         <div>
@@ -102,12 +135,18 @@ const TechnologyExperience = ({ technology }: { technology: Technologies }) => {
           <div className="mt-2">
             {filteredExperience
               .filter((e) => e.type === ExperienceType.PetProject)
-              .map((experience) => (
-                <PlaceWhereItWasUsed
-                  key={experience.company}
-                  experience={experience}
-                />
-              ))}
+              .map((experience) => {
+                const companyKey = Array.isArray(experience.company)
+                  ? experience.company.join("-")
+                  : experience.company;
+
+                return (
+                  <PlaceWhereItWasUsed
+                    key={`${experience.title}-${companyKey}-${experience.startDate}-${experience.endDate}`}
+                    experience={experience}
+                  />
+                );
+              })}
           </div>
         </div>
       </div>
@@ -159,6 +198,10 @@ const techTypeColors = {
   [TechType.Principles]: {
     unchecked: "bg-green-200 hover:bg-green-400 ring-green-500",
     checked: "bg-green-400 hover:bg-green-300 ring-green-500",
+  },
+  [TechType.Infra]: {
+    unchecked: "bg-slate-200 hover:bg-slate-400 ring-slate-500",
+    checked: "bg-slate-400 hover:bg-slate-300 ring-slate-500",
   },
   [TechType.AI]: {
     unchecked: "bg-purple-200 hover:bg-purple-400 ring-purple-500",
