@@ -23,12 +23,12 @@ const CVPage = () => {
           <Summary />
         </Content>
         <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 print:flex-row print:space-x-4">
-          <div className="w-full lg:w-3/5 print:w-3/5">
+          <div className="w-full lg:w-3/5 print:w-4/6">
             <Content title="Experience">
               <Experience page={0} />
             </Content>
           </div>
-          <div className="w-full lg:w-2/5 print:w-2/5">
+          <div className="w-full lg:w-2/5 print:w-2/6">
             <Content title="Skills">
               <Skills page={0} />
             </Content>
@@ -37,7 +37,7 @@ const CVPage = () => {
       </div>
       <div className="bg-white p-4 rounded shadow-md w-full max-w-4xl print:min-h-screen">
         <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 print:flex-row print:space-x-4">
-          <div className="w-full lg:w-3/5 print:w-3/5">
+          <div className="w-full lg:w-3/5 print:w-4/6">
             <Content title="Experience">
               <Experience page={1} />
             </Content>
@@ -45,7 +45,7 @@ const CVPage = () => {
               <Education />
             </Content>
           </div>
-          <div className="w-full lg:w-2/5 print:w-2/5">
+          <div className="w-full lg:w-2/5 print:w-2/6">
             <Content title="Skills">
               <Skills page={1} />
             </Content>

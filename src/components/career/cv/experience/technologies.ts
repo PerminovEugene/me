@@ -28,6 +28,7 @@ export enum Technologies {
   TwitterFlight = "Twitter Flight",
   Jquery = "Jquery",
   VSCodeAPI = "VSCode API",
+  Zustand = "Zustand",
 
   // Back-end
   NodeJs = "Node.js",
@@ -66,6 +67,7 @@ export enum Technologies {
 
   // DevOps
   Docker = "Docker",
+  DockerCompose = "Docker Compose",
   Kubernetes = "Kubernetes",
   AWS = "AWS",
   GithubActions = "Github actions",
@@ -74,6 +76,16 @@ export enum Technologies {
   Datadog = "Datadog",
   Debezium = "Debezium",
   Heroku = "Heroku",
+
+  // Infra
+  Promtail = "Promtail",
+  Loki = "Loki",
+  Tempo = "Tempo",
+  Prometheus = "Prometheus",
+  Grafana = "Grafana",
+  PostgresExporter = "Postgres Exporter",
+  NodeExporter = "Node Exporter",
+  Caddy = "Caddy",
 
   // Blockchain
   Ethereum = "Ethereum",
@@ -118,6 +130,7 @@ export enum TechType {
   Databases = "Databases",
   Testing = "Testing",
   DevOps = "DevOps",
+  Infra = "Infra",
   Blockchain = "Blockchain",
   ThirdPartyIntegrations = "3rd-Party Integrations",
   SoftSkills = "Soft Skills",
@@ -156,6 +169,7 @@ export const technologyToType: { [key in Technologies]: TechType } = {
   [Technologies.TwitterFlight]: TechType.FrontEnd,
   [Technologies.Jquery]: TechType.FrontEnd,
   [Technologies.VSCodeAPI]: TechType.FrontEnd,
+  [Technologies.Zustand]: TechType.FrontEnd,
 
   // Back-end
   [Technologies.NodeJs]: TechType.BackEnd,
@@ -200,6 +214,7 @@ export const technologyToType: { [key in Technologies]: TechType } = {
   [Technologies.Datadog]: TechType.DevOps,
   [Technologies.Debezium]: TechType.DevOps,
   [Technologies.Heroku]: TechType.DevOps,
+  [Technologies.DockerCompose]: TechType.DevOps,
 
   // Blockchain
   [Technologies.Ethereum]: TechType.Blockchain,
@@ -232,6 +247,16 @@ export const technologyToType: { [key in Technologies]: TechType } = {
   [Technologies.KISS]: TechType.Principles,
   [Technologies.TDD]: TechType.Principles,
   [Technologies.YAGNI]: TechType.Principles,
+
+  // Infra
+  [Technologies.Caddy]: TechType.Infra,
+  [Technologies.Prometheus]: TechType.Infra,
+  [Technologies.Promtail]: TechType.Infra,
+  [Technologies.Loki]: TechType.Infra,
+  [Technologies.Grafana]: TechType.Infra,
+  [Technologies.PostgresExporter]: TechType.Infra,
+  [Technologies.NodeExporter]: TechType.Infra,
+  [Technologies.Tempo]: TechType.Infra,
 
   // AI
   [Technologies.Ollama]: TechType.AI,

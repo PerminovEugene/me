@@ -15,9 +15,9 @@ const LanguageBlock = ({ language }: { language: Language }) => {
         </span>
       </div>
       <div className="flex items-center space-x-1">
-        {[...Array(filledCircles)].map((_, index) => (
+        {/* {[...Array(filledCircles)].map((_, index) => (
           <div key={index} className="w-4 h-4 bg-blue-500 rounded-full"></div>
-        ))}
+        ))} */}
         {[...Array(emptyCircles)].map((_, index) => (
           <div
             key={index + filledCircles}

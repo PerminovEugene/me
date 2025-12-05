@@ -6,17 +6,19 @@ export type UsedTechnology = {
 
 export type Experience = {
   title: string;
-  company: string;
+  merged?: boolean;
+  company: string | string[];
   location: string;
   startDate: string;
   endDate: string;
-  stack: UsedTechnology[];
+  stack?: UsedTechnology[];
   responsibilities: string[];
-  link: string;
+  link: string | string[];
   months: number;
   type: ExperienceType;
-  status: ProductStatus;
+  status?: ProductStatus;
   visibleOnCv?: boolean;
+  items?: Experience[];
 };
 
 export enum ExperienceType {

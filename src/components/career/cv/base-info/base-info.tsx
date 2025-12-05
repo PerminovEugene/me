@@ -1,4 +1,3 @@
-import { FaArrowUp } from "react-icons/fa";
 import {
   ContactEmail,
   ContactGit,
@@ -34,10 +33,10 @@ const BaseInfo = () => {
             address="https://www.evgeniiperminov.dev"
             text="evgeniiperminov.dev"
           />
-          <span className="text-green-600 font-semibold flex items-center space-x-1 alligh-right">
-            My website
-            <FaArrowUp className="ml-0 pb-0.5" />
-          </span>
+          <ContactWebsite
+            address="https://dev.to/evgeniiperminov"
+            text="dev.to"
+          />
         </div>
       </div>
     </div>
