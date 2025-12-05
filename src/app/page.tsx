@@ -2,10 +2,36 @@ import React from "react";
 import { routes } from "@/routing/routing";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Evgenii Perminov | Senior Software Engineer & Tech Enthusiast",
+  description: "Personal website of Evgenii Perminov, a full-stack developer specializing in TypeScript, Node.js, React and blockchain technologies. View my portfolio, read tech articles, or contact me for collaboration.",
+  alternates: {
+    canonical: 'https://www.evgeniiperminov.dev',
+  },
+};
 
 const HomePage = () => {
   return (
     <div className="w-full text-white">
+      {/* Schema.org WebSite Structured Data */}
+      <Script id="website-schema" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Evgenii Perminov | Senior Software Engineer",
+          url: "https://www.evgeniiperminov.dev",
+          description: "Personal website of Evgenii Perminov, a full-stack developer specializing in TypeScript, Node.js, React and blockchain technologies.",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://www.evgeniiperminov.dev/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}
+      </Script>
+      
       {/* Section 1 - About Me */}
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 text-center md:text-left border-b-2 border-white border-dotted">
         <div className="lg:w-1/2 p-5 lg:pl-20 md:pl-10">
@@ -25,6 +51,7 @@ const HomePage = () => {
             width={400}
             height={400}
             className="rounded-lg shadow-lg"
+            priority
           />
         </div>
       </section>
@@ -48,7 +75,7 @@ const HomePage = () => {
         <div className="md:w-1/2 flex justify-center">
           <Image
             src="/files/design/cat-with-diagram.webp"
-            alt="Career Cat"
+            alt="Career Path Visualization - Skills and Experience"
             width={400}
             height={400}
             className="rounded-lg shadow-lg"
@@ -73,7 +100,7 @@ const HomePage = () => {
         <div className="md:w-1/2 flex justify-center">
           <Image
             src="/files/design/cat-postman.webp"
-            alt="Contact Cat"
+            alt="Contact Information - Get in touch with Evgenii Perminov"
             width={400}
             height={400}
             className="rounded-lg shadow-lg"
