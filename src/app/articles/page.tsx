@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "web development tutorials",
   ],
   openGraph: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ...(metadataBase.openGraph as any),
     title: "Articles by Evgenii Perminov | Tech, Blockchain & Web Development",
     description:
